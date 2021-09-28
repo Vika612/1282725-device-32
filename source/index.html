@@ -8,7 +8,7 @@
   <body>
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo" href="#">
+        <a class="header__logo">
           <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.2 0V35.3H19.6V32.9C17.9 34.8 15.5 36 12.1 36C5.5 36 0 30.2 0 22.7C0 15.2 5.5 9.4 12.1 9.4C15.5 9.4 18 10.6 19.6 12.5V0H27.2ZM19.6 22.7C19.6 18.9 17.1 16.5 13.6 16.5C10.1 16.5 7.6 18.9 7.6 22.7C7.6 26.5 10.1 28.9 13.6 28.9C17.1 28.8 19.6 26.5 19.6 22.7Z" fill="black"/>
             <path d="M43.7001 29.1999C45.8001 29.1999 47.5001 28.3999 48.5001 27.2999L54.6001 30.7999C52.1001 34.1999 48.4001 35.9999 43.6001 35.9999C35.0001 35.9999 29.6001 30.1999 29.6001 22.6999C29.6001 15.1999 35.0001 9.3999 43.0001 9.3999C50.4001 9.3999 55.8001 15.0999 55.8001 22.6999C55.8001 23.7999 55.7001 24.7999 55.5001 25.6999H37.6001C38.6001 28.2999 40.9001 29.1999 43.7001 29.1999ZM48.3001 20.0999C47.5001 17.1999 45.2001 16.0999 42.9001 16.0999C40.0001 16.0999 38.1001 17.4999 37.4001 20.0999H48.3001Z" fill="black"/>
@@ -37,7 +37,7 @@
               <li class="catalog-menu__title">Каталог товаров
                 <ul class="catalog-menu__items">
                   <li><a href="#">Виртуальная реальность</a></li>
-                  <li><a href="#">Моноподы для cелфи</a></li>
+                  <li><a href="inner.html">Моноподы для cелфи</a></li>
                   <li><a href="#">Экшн-камеры</a></li>
                   <li><a href="#">Фитнес-браслеты</a></li>
                   <li><a href="#">Умные часы</a></li>
@@ -71,10 +71,10 @@
                 <p>Порхает как бабочка, жалит как пчела!</p>
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <dl>
-                  <dd>800 м</dd>
-                  <dt>Дальность полета</dt>
-                  <dd>50 м</dd>
-                  <dt>Радиус поражения</dt>
+                  <dt>800 м</dt>
+                  <dd>Дальность полета</dd>
+                  <dt>50 м</dt>
+                  <dd>Радиус поражения</dd>
                 </dl>
                 <a class="slide__link" href="#">Подробнее</a>
               </div>
@@ -88,8 +88,8 @@
                 <p>Худеем правильно!</p>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
                 <dl>
-                  <dd>48 часов</dd>
-                  <dt>Без подзарядки</dt>
+                  <dt>48 часов</dt>
+                  <dd>Без подзарядки</dd>
                 </dl>
                 <a class="slide__link" href="#">Подробнее</a>
               </div>
@@ -103,12 +103,12 @@
                 <p>Делай селфи, как Бен Стиллер! </p>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
                 <dl>
-                  <dd>8,5 м</dd>
-                  <dt>Длина палки</dt>
-                  <dd>5 кг</dd>
-                  <dt>Вес палки</dt>
-                  <dd>Карбон</dd>
-                  <dt>Материал</dt>
+                  <dt>8,5 м</dt>
+                  <dd>Длина палки</dd>
+                  <dt>5 кг</dt>
+                  <dd>Вес палки</dd>
+                  <dt>Карбон</dt>
+                  <dd>Материал</dd>
                 </dl>
                 <a class="slide__link" href="#">Подробнее</a>
               </div>
@@ -126,10 +126,10 @@
             </li>
           </ul>
           <button type="button">
-            <img src="source/img/svg/arrow-prev.svg" width="20" height="60" alt="Предыдущий слайд">
+            <img src="img/svg/arrow-prev.svg" width="20" height="60" alt="Предыдущий слайд">
           </button>
           <button type="button">
-            <img src="source/img/svg/arrow-next.svg" width="20" height="60" alt="Следующий слайд">
+            <img src="img/svg/arrow-next.svg" width="20" height="60" alt="Следующий слайд">
           </button>
         </div>
       </section>
@@ -146,7 +146,7 @@
               </a>
             </li>
             <li class="categories__item">
-              <a class="categories__link" href="#">
+              <a class="categories__link" href="inner.html">
                 <h3 class="categories__title">Моноподы для селфи</h3>
                 <div class="categories__img">
                   <img src="img/svg/category-2.svg" width="160" height="160" alt="Моноподы для селфи">
@@ -223,12 +223,10 @@
       </section>
 
       <div class="delivery-bonus">
-        <div class="delivery-bonus__wrapper">
-          <h2 class="visually-hidden">Доставка под заказ</h2>
-          <p class="delivery-bonus__text">
-            Доставим редкий товар под заказ
-          </p>
-        </div>
+        <h2 class="visually-hidden">Доставка под заказ</h2>
+        <button class="delivery-bonus__button">
+          Доставим редкий товар под заказ
+        </button>
       </div>
 
       <section class="about-us">
