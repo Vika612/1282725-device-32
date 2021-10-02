@@ -1,0 +1,520 @@
+/* raleway-800 - latin_cyrillic */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2"),
+    url("../fonts/raleway/raleway-800.woff") format("woff");
+}
+
+/* rubik-regular - latin_cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2"),
+    url("../fonts/rubik/rubik-400.woff") format("woff");
+}
+
+/* rubik-700 - latin_cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2"),
+    url("../fonts/rubik/rubik-700.woff") format("woff");
+}
+
+/* rubik-800 - latin_cyrillic */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/rubik/rubik-800.woff2") format("woff2"),
+    url("../fonts/rubik/rubik-800.woff") format("woff");
+}
+
+/* GENERAL STYLES */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --black: #000000;
+  --dark: #444444;
+  --gray: #DCDCDC;
+  --light-gray: #EBEBEB;
+  --light: #F0F0F0;
+  --white: #FFFFFF;
+  --yellow-light: #FFE17F;
+  --yellow-dark: #FFC700;
+  --purple: #AF4FFF;
+  --red: #FF3D3D;
+  --orange: #FD912E;
+  --green: #08AF00;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.button {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 1;
+  color: var(--black);
+}
+
+/* ------------------------------------------------------ */
+
+/* USER-MENU */
+
+.user-menu__list {
+  padding: 0;
+  list-style: none;
+}
+
+.user-menu__link {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+/* SHOPPING-CART */
+
+.shopping-cart {
+  background-color: var(--black);
+}
+
+.shopping-cart__list,
+.shopping-cart__menu-list {
+  padding: 0;
+  list-style: none;
+}
+
+.shopping-cart__item p,
+.shopping-cart__menu-list li {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.shopping-cart__link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  background-color: var(--white);
+  text-transform: uppercase;
+}
+
+/* MAIN-MENU */
+
+.main-menu__list {
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu__link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* SUB-MENU */
+
+.sub-menu__list {
+  padding: 0;
+  list-style: none;
+}
+
+.sub-menu__link {
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+/* PROMO-SLIDER */
+
+.promo-slider__list,
+.promo-slider__btns {
+  padding: 0;
+  list-style: none;
+}
+
+.promo-slider__btn {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+.promo-slider__btn:focus {
+  border: 2px solid var(--purple);
+}
+.promo-slider__btn:hover {
+  border: 2px solid var(--black);
+  opacity: 0.6;
+}
+.promo-slider__btn:active {
+  border: 2px solid var(--black);
+  opacity: 0.3;
+}
+.promo-slider__btn.active {
+  background-color: var(--black);
+  border: 2px solid var(--black);
+}
+
+/* SLIDE */
+
+.slide__list dt {
+  font-size: 36px;
+  line-height: 0.8;
+}
+
+.slide__list dd {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* CATEGORIES */
+
+.categories__list {
+  padding: 0;
+  list-style: none;
+}
+
+.categories__link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+/* TABS */
+
+.tabs__triggers,
+.tabs__content {
+  padding: 0;
+  list-style: none;
+}
+
+/* DELIVERY-BONUS */
+
+.delivery-bonus__link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* ABOUT-US */
+
+.about-us__transport-list {
+  padding: 0;
+  list-style: none;
+}
+
+.about-us__transport-list li {
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+/* CONTACTS */
+
+.contacts__address h3,
+.contacts__work-in-hours h3 {
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+.contacts__address p {
+  font-style: normal;
+}
+
+.contacts__address a {
+  font-style: normal;
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+/* SUBSCRIPTION */
+
+.subscription__form button {
+  background-color: transparent;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--dark);
+}
+
+.footer__logo svg {
+  fill: var(--yellow-dark);
+}
+
+.footer__info address {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.footer__info-tel {
+  font-style: 16px;
+  line-height: 1.8;
+  color: var(--white);
+}
+
+.footer__info-list {
+  padding: 0;
+  list-style: none;
+}
+
+.footer__info-link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.footer__links-author svg {
+  fill: var(--yellow-dark);
+}
+
+/* SOCIAL */
+
+.social {
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  outline: none;
+}
+
+.social__link svg {
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  fill: var(--dark);
+}
+
+.social__link:focus {
+  background-color: transparent;
+  outline: 5px solid var(--purple);
+}
+.social__link:focus svg {
+  fill: var(--white);
+}
+.social__link:hover {
+  background-color: var(--yellow-dark);
+  outline: none;
+}
+.social__link:hover svg {
+  fill: var(--dark);
+}
+.social__link:active svg {
+  fill: var(--dark);
+  opacity: 0.3;
+}
+
+/* ------------------------------------------------------------ */
+
+
+/* BREADCRUMBS */
+
+.breadcrumbs__list {
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__link {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+  opacity: 0.6;
+}
+
+/* FILTER */
+
+.filter__title {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.filter__field-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.filter__field-list {
+  padding: 0;
+  list-style: none;
+}
+
+.filter__field-label {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* SORT */
+
+.sort__title {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.sort__list {
+  border: 0;
+}
+
+.sort__list option {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+/* CARDS */
+
+.cards__list {
+  padding: 0;
+  list-style: none;
+}
+
+.cards__item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+.cards__item-info span {
+  line-height: 1.1;
+}
+
+.cards__load,
+.paginator__link {
+  font-family: "Raleway", "Tahoma", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* PAGINATOR */
+
+.paginator__list {
+  padding: 0;
+  list-style: none;
+}
+
+.paginator__num {
+  font-size: 16px;
+  line-height: 1.2;
+  opacity: 0.3;
+}
