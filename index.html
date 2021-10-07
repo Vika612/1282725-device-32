@@ -92,8 +92,7 @@
         </div>
       </header>
 
-
-      <main>
+      <main class="main">
         <h1 class="visually-hidden">Интернет-магазин «Девайс»</h1>
 
         <section class="promo-slider">
@@ -107,12 +106,16 @@
                 <div class="slide__info">
                   <p class="slide__info-title title">Порхает как бабочка, жалит как пчела!</p>
                   <p class="slide__info-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                  <dl class="slide__list">
-                    <dt>800 м</dt>
-                    <dd>Дальность полета</dd>
-                    <dt>50 м</dt>
-                    <dd>Радиус поражения</dd>
-                  </dl>
+                  <table class="slide__list">
+                    <tr>
+                      <th>800 м</th>
+                      <th>50 м</th>
+                    </tr>
+                    <tr>
+                      <td>Дальность полета</td>
+                      <td>Радиус поражения</td>
+                    </tr>
+                  </table>
                   <a class="slide__link button" href="#">Подробнее</a>
                 </div>
               </li>
@@ -122,12 +125,16 @@
                   <img src="img/slider/slider-2.png" width="560" height="560" alt="Фитнес-браслет">
                 </div>
                 <div class="slide__info">
-                  <p class="slide__info-title title">Худеем правильно!</p>
+                  <p class="slide__info-title title">Худеем<br> правильно!</p>
                   <p class="slide__info-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                  <dl class="slide__list">
-                    <dt>48 часов</dt>
-                    <dd>Без подзарядки</dd>
-                  </dl>
+                  <table class="slide__list">
+                    <tr>
+                      <th>48 часов</th>
+                    </tr>
+                    <tr>
+                      <td>Без подзарядки</td>
+                    </tr>
+                  </table>
                   <a class="slide__link button" href="#">Подробнее</a>
                 </div>
               </li>
@@ -137,16 +144,20 @@
                   <img src="img/slider/slider-3.png" width="560" height="560" alt="Палка для селфи">
                 </div>
                 <div class="slide__info">
-                  <p class="slide__info-title title">Делай селфи, как Бен Стиллер! </p>
+                  <p class="slide__info-title title">Делай селфи,<br> как Бен Стиллер! </p>
                   <p class="slide__info-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                  <dl class="slide__list">
-                    <dt>8,5 м</dt>
-                    <dd>Длина палки</dd>
-                    <dt>5 кг</dt>
-                    <dd>Вес палки</dd>
-                    <dt>Карбон</dt>
-                    <dd>Материал</dd>
-                  </dl>
+                  <table class="slide__list">
+                    <tr>
+                      <th>8,5 м</th>
+                      <th>5 кг</th>
+                      <th>Карбон</th>
+                    </tr>
+                    <tr>
+                      <td>Длина палки</td>
+                      <td>Вес палки</td>
+                      <td>Материал</td>
+                    </tr>
+                  </table>
                   <a class="slide__link button" href="#">Подробнее</a>
                 </div>
               </li>
@@ -162,10 +173,10 @@
                 <button class="promo-slider__btn" type="button" aria-label="слайд 3"></button>
               </li>
             </ul>
-            <button type="button">
+            <button class="promo-slider__arrow promo-slider__arrow--prev" type="button">
               <img src="img/svg/arrow-prev.svg" width="20" height="60" alt="Предыдущий слайд">
             </button>
-            <button type="button">
+            <button class="promo-slider__arrow promo-slider__arrow--next" type="button">
               <img src="img/svg/arrow-next.svg" width="20" height="60" alt="Следующий слайд">
             </button>
           </div>
@@ -176,22 +187,22 @@
             <h2 class="visually-hidden">Категории товаров</h2>
             <ul class="categories__list">
               <li class="categories__item">
-                <a class="categories__link" href="#">Виртуальная реальность</a>
+                <a class="categories__link categories__link--1" href="#">Виртуальная реальность</a>
               </li>
               <li class="categories__item">
-                <a class="categories__link" href="inner.html">Моноподы для селфи</a>
+                <a class="categories__link categories__link--2" href="inner.html">Моноподы<br> для селфи</a>
               </li>
               <li class="categories__item">
-                <a class="categories__link" href="#">Экшн-камеры</a>
+                <a class="categories__link categories__link--3" href="#">Экшн-камеры</a>
               </li>
               <li class="categories__item">
-                <a class="categories__link" href="#">Фитнес-браслеты</a>
+                <a class="categories__link categories__link--4" href="#">Фитнес-браслеты</a>
               </li>
               <li class="categories__item">
-                <a class="categories__link" href="#">Умные часы</a>
+                <a class="categories__link categories__link--5" href="#">Умные часы</a>
               </li>
               <li class="categories__item">
-                <a class="categories__link" href="#">Квадрокоптеры</a>
+                <a class="categories__link categories__link--6" href="#">Квадрокоптеры</a>
               </li>
             </ul>
           </div>
@@ -203,13 +214,13 @@
             <div class="services__tabs tabs">
               <ul class="tabs__triggers">
                 <li class="tabs__item">
-                  <a class="tabs__link button" href="#tab-1">Доставка</a>
+                  <a class="tabs__link button button--tab" href="#tab-1">Доставка</a>
                 </li>
                 <li class="tabs__item">
-                  <a class="tabs__link button" href="#tab-2">Гарантия</a>
+                  <a class="tabs__link button button--tab" href="#tab-2">Гарантия</a>
                 </li>
                 <li class="tabs__item">
-                  <a class="tabs__link button" href="#tab-3">Кредит</a>
+                  <a class="tabs__link button button--tab" href="#tab-3">Кредит</a>
                 </li>
               </ul>
               <ul class="tabs__content">
@@ -236,7 +247,7 @@
           </div>
         </section>
 
-        <div class="delivery-bonus">
+        <div class="delivery-bonus container">
           <h2 class="visually-hidden">Доставка под заказ</h2>
           <a class="delivery-bonus__link" href="#">Доставим редкий товар под заказ</a>
         </div>
@@ -290,7 +301,7 @@
             <form class="subscription__form" action="http://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="subscribe-email">Пожалуйста, укажите Ваш e-mail</label>
               <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail">
-              <button class="button" type="submit">Подписаться</button>
+              <button type="submit">Подписаться</button>
               <span>Это бесплатно</span>
             </form>
           </div>
@@ -300,7 +311,7 @@
 
       <footer class="footer">
         <div class="footer__wrapper container">
-          <a class="footer__logo" href="#">
+          <a class="footer__logo">
             <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M27.2 0V35.3H19.6V32.9C17.9 34.8 15.5 36 12.1 36C5.5 36 0 30.2 0 22.7C0 15.2 5.5 9.4 12.1 9.4C15.5 9.4 18 10.6 19.6 12.5V0H27.2ZM19.6 22.7C19.6 18.9 17.1 16.5 13.6 16.5C10.1 16.5 7.6 18.9 7.6 22.7C7.6 26.5 10.1 28.9 13.6 28.9C17.1 28.8 19.6 26.5 19.6 22.7Z"/>
               <path d="M43.7001 29.1999C45.8001 29.1999 47.5001 28.3999 48.5001 27.2999L54.6001 30.7999C52.1001 34.1999 48.4001 35.9999 43.6001 35.9999C35.0001 35.9999 29.6001 30.1999 29.6001 22.6999C29.6001 15.1999 35.0001 9.3999 43.0001 9.3999C50.4001 9.3999 55.8001 15.0999 55.8001 22.6999C55.8001 23.7999 55.7001 24.7999 55.5001 25.6999H37.6001C38.6001 28.2999 40.9001 29.1999 43.7001 29.1999ZM48.3001 20.0999C47.5001 17.1999 45.2001 16.0999 42.9001 16.0999C40.0001 16.0999 38.1001 17.4999 37.4001 20.0999H48.3001Z"/>
@@ -372,7 +383,7 @@
                 <path d="M78.3 17.8999C75 17.8999 72.8 20.3999 72.8 23.4999C72.8 26.4999 74.9 29.0999 78.3 29.0999C80.8 29.0999 82.8 27.7999 83.5 25.4999H81.4C80.9 26.4999 79.8 27.0999 78.4 27.0999C76.5 27.0999 75.1 25.7999 75 24.1999H83.8C84 20.5999 81.8 17.8999 78.3 17.8999ZM78.3 19.7999C80 19.7999 81.3 20.7999 81.6 22.3999H75.1C75.4 20.8999 76.6 19.7999 78.3 19.7999Z"/>
                 <path d="M98.2001 17.8999C96.6001 17.8999 95.3001 18.6999 94.6001 19.8999H94.5001C93.9001 18.6999 92.7001 17.8999 91.1001 17.8999C89.7001 17.8999 88.6001 18.5999 88.0001 19.6999V18.1999H86.1001V28.7999H88.1001V23.3999C88.1001 21.3999 89.1001 19.9999 90.7001 19.8999C92.2001 19.8999 93.1001 20.8999 93.1001 22.4999V28.7999H95.1001V23.1999C95.1001 20.7999 96.5001 19.8999 97.7001 19.8999C99.2001 19.8999 100.1 20.8999 100.1 22.4999V28.7999H102.1V22.2999C102.2 19.6999 100.7 17.8999 98.2001 17.8999Z"/>
                 <path d="M109.4 27.0001L105.8 18.1001H103.6L108.4 29.7001C108.1 30.6001 107.7 30.9001 106.7 30.9001H104.2V32.9001H106.7C108.5 32.9001 109.5 32.1001 110.2 30.3001L114.9 18.1001H112.8L109.4 27.0001Z"/>
-                </svg>
+              </svg>
             </a>
           </div>
         </div>
