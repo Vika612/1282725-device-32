@@ -263,7 +263,7 @@ body {
 
 .promo-slider__list {
   display: flex;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
 }
 
 .promo-slider__list,
@@ -279,6 +279,7 @@ body {
   margin: 0;
   width: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -303,7 +304,7 @@ body {
   border: 2px solid var(--black);
   opacity: 0.3;
 }
-.promo-slider__btn.active {
+.promo-slider__btn.promo-slider__btn--active {
   background-color: var(--black);
   border: 2px solid var(--black);
 }
@@ -605,14 +606,34 @@ body {
 /* FOOTER */
 
 .footer {
+  min-height: 321px;
   background-color: var(--dark);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  width: 150px;
+  margin: 60px 0 25px 0;
 }
 
 .footer__logo svg {
   fill: var(--yellow-dark);
 }
 
+.footer__info {
+  margin-bottom: 45px;
+  display: flex;
+  align-items: center;
+}
+
 .footer__info address {
+  order: 0;
+  width: 240px;
+  margin-right: 114px;
   font-style: normal;
   font-size: 16px;
   line-height: 1.2;
@@ -620,7 +641,10 @@ body {
 }
 
 .footer__info-tel {
-  font-style: 16px;
+  order: 2;
+  margin-left: auto;
+  padding: 0 10px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--white);
   outline: none;
@@ -638,11 +662,21 @@ body {
 }
 
 .footer__info-list {
+  order: 1;
+  max-width: 600px;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
+.footer__info-item {
+  margin-right: 7px;
+}
+
 .footer__info-link {
+  padding: 10px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -666,7 +700,25 @@ body {
   opacity: 0.3;
 }
 
+.footer__links {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__links::before {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: var(--yellow-dark);
+  content: "";
+}
+
 .footer__links-author {
+  margin-left: 360px;
+  padding: 10px 10px 0;
   outline: none;
 }
 .footer__links-author:focus {
@@ -690,8 +742,16 @@ body {
 /* SOCIAL */
 
 .social {
+  max-width: 600px;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+}
+
+.social__item {
+  margin: 8px;
 }
 
 .social__link {

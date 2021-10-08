@@ -9,31 +9,71 @@ const item = document.querySelector('.promo-slider__item');
 const btnPrev = document.querySelector('.promo-slider__arrow--prev');
 const btnNext = document.querySelector('.promo-slider__arrow--next');
 const items = document.querySelectorAll('.promo-slider__item');
+const bullets = document.querySelectorAll('.promo-slider__btn');
 const itemsCount = items.length;
-const itemWidth = container.clientWidth / slidesToShow;
+const itemWidth = 1160;
 const movePosition = slidesToScroll * itemWidth;
+
+bullets.forEach((bullet) => {
+  bullet.addEventListener('click', () => {
+
+    position = calculateCoord(+bullet.dataset.index);
+    document.querySelector('.promo-slider__btn--active').classList.remove('promo-slider__btn--active');
+    bullet.classList.add('promo-slider__btn--active');
+    setPosition();
+  });
+});
+
+
+const calculateCoord = (k) => -(itemWidth * k);
+
 
 items.forEach((item) => {
   item.style.minWidth = `${itemWidth}px`;
 });
 
-btnNext.addEventListener('click', () => {
-  position -= movePosition;
 
-  setPosition();
-  checkBtns();
+const switchActiveBullet = (index) => {
+  document.querySelector('.promo-slider__btn--active').classList.remove('promo-slider__btn--active');
+  bullets[index].classList.add('promo-slider__btn--active');
+};
+
+
+btnNext.addEventListener('click', () => {
+
+  let indexActiveBullet = Array.from(bullets).indexOf(document.querySelector('.promo-slider__btn--active'));
+
+
+  if (indexActiveBullet < bullets.length - 1) {
+    position -= movePosition;
+    indexActiveBullet += 1;
+
+    switchActiveBullet(indexActiveBullet);
+    setPosition();
+    checkBtns();
+  };
 });
+
 
 btnPrev.addEventListener('click', () => {
-  position += movePosition;
 
-  setPosition();
-  checkBtns();
+  let indexActiveBullet = Array.from(bullets).indexOf(document.querySelector('.promo-slider__btn--active'));
+
+  if (indexActiveBullet > 0) {
+    position += movePosition;
+    indexActiveBullet -= 1;
+
+    switchActiveBullet(indexActiveBullet);
+    setPosition();
+    checkBtns();
+  };
 });
+
 
 const setPosition = () => {
   track.style.transform = `translateX(${position}px)`
 };
+
 
 const checkBtns = () => {
   btnPrev.disabled = position === 0;
