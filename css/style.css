@@ -541,14 +541,93 @@ body {
 
 /* DELIVERY-BONUS */
 
+.delivery-bonus {
+  margin-bottom: 97px;
+}
+
 .delivery-bonus__link {
+  position: relative;
+  display: block;
+  padding: 40px 125px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 1.1;
   letter-spacing: 0.2em;
   color: var(--black);
+  background-color: var(--light);
   text-transform: uppercase;
+  text-align: center;
+  outline: none;
+}
+.delivery-bonus__link:focus {
+  outline: 5px solid var(--purple);
+}
+.delivery-bonus__link:hover {
+  background-color: var(--light-gray);
+  outline: none;
+}
+.delivery-bonus__link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.delivery-bonus__link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125px;
+  height: 100%;
+  background-color: var(--yellow-light);
+  content: "";
+}
+.delivery-bonus__link:hover::before {
+  background-color: var(--yellow-dark);
+}
+
+.delivery-bonus__link::after {
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  width: 47px;
+  height: 31px;
+  background-image: url("../img/svg/delivery-bonus.svg");
+  content: "";
+}
+.delivery-bonus__link:active::after {
+  opacity: 0.3;
+}
+
+.delivery-bonus__link span {
+  position: absolute;
+  top: 29px;
+  right: 33px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+.delivery-bonus__link:hover span {
+  background-color: var(--gray);
+}
+
+.delivery-bonus__link span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 12px;
+  opacity: 0.3;
+  background-image: url("../img/svg/info.svg");
+  border-radius: 50%;
+  content: "";
+}
+.delivery-bonus__link:hover span::after {
+  opacity: 1;
+}
+.delivery-bonus__link:active span::after {
+  opacity: 0.3;
 }
 
 /* INFO-COMPANY */
