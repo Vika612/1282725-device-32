@@ -164,13 +164,13 @@
             </ul>
             <ul class="promo-slider__btns">
               <li>
-                <button class="promo-slider__btn active" type="button" aria-label="слайд 1"></button>
+                <button class="promo-slider__btn promo-slider__btn--active" data-index="0" type="button" aria-label="слайд 1"></button>
               </li>
               <li>
-                <button class="promo-slider__btn" type="button" aria-label="слайд 2"></button>
+                <button class="promo-slider__btn" data-index="1" type="button" aria-label="слайд 2"></button>
               </li>
               <li>
-                <button class="promo-slider__btn" type="button" aria-label="слайд 3"></button>
+                <button class="promo-slider__btn" data-index="2" type="button" aria-label="слайд 3"></button>
               </li>
             </ul>
             <button class="promo-slider__arrow promo-slider__arrow--prev" type="button">
@@ -214,7 +214,7 @@
             <div class="services__tabs tabs">
               <ul class="tabs__triggers">
                 <li class="tabs__item">
-                  <a class="tabs__link button button--tab" href="#tab-1">Доставка</a>
+                  <a class="tabs__link button button--tab active" href="#tab-1">Доставка</a>
                 </li>
                 <li class="tabs__item">
                   <a class="tabs__link button button--tab" href="#tab-2">Гарантия</a>
@@ -224,19 +224,19 @@
                 </li>
               </ul>
               <ul class="tabs__content">
-                <li class="tabs__item-content" id="tab-1">
+                <li class="tabs__item-content tabs__item-content--delivery" id="tab-1">
                   <h3 class="tabs__title title">Доставка</h3>
                   <p class="tabs__text">
                     Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
                   </p>
                 </li>
-                <li class="tabs__item-content" id="tab-2">
+                <li class="tabs__item-content tabs__item-content--warranty" id="tab-2">
                   <h3 class="tabs__title title">Гарантия</h3>
                   <p class="tabs__text">
                     Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
                   </p>
                 </li>
-                <li class="tabs__item-content" id="tab-3">
+                <li class="tabs__item-content tabs__item-content--credit" id="tab-3">
                   <h3 class="tabs__title title">Кредит</h3>
                   <p class="tabs__text">
                     Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
@@ -249,11 +249,13 @@
 
         <div class="delivery-bonus container">
           <h2 class="visually-hidden">Доставка под заказ</h2>
-          <a class="delivery-bonus__link" href="#">Доставим редкий товар под заказ</a>
+          <a class="delivery-bonus__link" href="#">Доставим редкий товар под заказ
+            <span title="дополнительная информация"></span>
+          </a>
         </div>
 
-        <section class="about-us">
-          <div class="about-us__wrapper container">
+        <div class="info-company container">
+          <section class="info-company__item about-us">
             <h2 class="about-us__title title">О нас</h2>
             <p class="about-us__text">
               Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
@@ -267,11 +269,9 @@
               <li>ТоксБерри</li>
             </ul>
             <a class="about-us__link button" href="#">Подробнее о нас</a>
-          </div>
-        </section>
+          </section>
 
-        <section class="contacts">
-          <div class="contacts__wrapper container">
+          <section class="info-company__item contacts">
             <h2 class="contacts__title title">Контакты</h2>
             <p class="contacts__text">
               Вы можете забрать товар сами, заехав в наш офис. Заодно, сможете проверить работоспособность покупки.
@@ -289,21 +289,21 @@
               <p>сб—вс: с 10:00 до 19:00</p>
             </div>
             <a class="contacts__link button" href="#">Напишите нам</a>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section class="subscription">
           <div class="subscription__wrapper container">
-            <h2 class="subscription__title title">Подпишитесь на рассылку</h2>
+            <h2 class="subscription__title title">Подпишитесь<br> на рассылку</h2>
             <p class="subscription__text">
               Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
             </p>
             <form class="subscription__form" action="http://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="subscribe-email">Пожалуйста, укажите Ваш e-mail</label>
-              <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail">
-              <button type="submit">Подписаться</button>
-              <span>Это бесплатно</span>
+              <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" autocomplete="off">
+              <button class="button" type="submit">Подписаться</button>
             </form>
+            <span class="subscription__note">Это бесплатно</span>
           </div>
         </section>
       </main>
@@ -421,6 +421,6 @@
       </div>
     </div>-->
 
-    <script src="js/main,js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
