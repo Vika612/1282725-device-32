@@ -126,6 +126,7 @@ body {
   background-color: transparent;
   text-transform: uppercase;
   outline: none;
+  cursor: pointer;
 }
 .button:active {
   color: rgba(0, 0, 0, 0.3);
@@ -136,6 +137,7 @@ body {
   color: var(--yellow-light);
   background-color: var(--black);
   transition: all 0.5s ease;
+  cursor: default;
 }
 
 .button::before {
@@ -568,11 +570,6 @@ body {
   margin-bottom: 25px;
 }
 
-.tabs__item-content--warranty,
-.tabs__item-content--credit {
-  display: none;
-}
-
 .tabs__link {
   width: 160px;
   padding: 10px 17px;
@@ -588,6 +585,13 @@ body {
 .tabs__item-content {
   position: relative;
   padding: 20px 220px 20px 0;
+}
+
+.tabs__item-content {
+  display: none;
+}
+.tabs__item-content.active {
+  display: block;
 }
 
 .tabs__item-content--delivery {
