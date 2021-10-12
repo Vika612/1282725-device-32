@@ -130,8 +130,12 @@ body {
 .button:active {
   color: rgba(0, 0, 0, 0.3);
 }
-.button--tab:active {
+.button--tab.active {
+  width: 280px;
+  padding-right: 124px;
   color: var(--yellow-light);
+  background-color: var(--black);
+  transition: all 0.5s ease;
 }
 
 .button::before {
@@ -159,10 +163,6 @@ body {
 .button--inner::before,
 .button--inner:hover::before  {
   background-color: var(--yellow-dark);
-}
-.button--tab:active::before {
-  width: 280px;
-  background-color: var(--black);
 }
 
 .title {
@@ -425,7 +425,7 @@ body {
 /* CATEGORIES */
 
 .categories {
-  margin-bottom: 70px;
+  margin-bottom: 120px;
 }
 
 .categories__list {
@@ -525,7 +525,21 @@ body {
   background-image: url(../img/svg/category-6.svg);
 }
 
+/* SERVICES */
+
+.services {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 90px;
+  padding-bottom: 110px;
+  background: linear-gradient(transparent 14%, var(--light) 14%);
+}
+
 /* TABS */
+
+.tabs {
+  display: flex;
+}
 
 .tabs__triggers,
 .tabs__content {
@@ -533,10 +547,74 @@ body {
   list-style: none;
 }
 
+.tabs__triggers {
+  position: relative;
+  width: 286px;
+  margin: 0;
+  padding-top: 30px;
+}
+
+.tabs__triggers::after {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 7px;
+  height: 319px;
+  background-color: var(--black);
+  content: "";
+}
+
+.tabs__item {
+  margin-bottom: 25px;
+}
+
+.tabs__item-content--warranty,
+.tabs__item-content--credit {
+  display: none;
+}
+
 .tabs__link {
   width: 160px;
-  padding: 15px 17px;
+  padding: 10px 17px;
   display: block;
+  text-align: center;
+}
+
+.tabs__content {
+  margin: 0;
+  padding-left: 115px;
+}
+
+.tabs__item-content {
+  position: relative;
+  padding: 20px 220px 20px 0;
+}
+
+.tabs__item-content--delivery {
+  background-image: url("../img/svg/delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 96% 80%;
+}
+
+.tabs__item-content--warranty {
+  background-image: url("../img/svg/warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+
+.tabs__item-content--credit {
+  background-image: url("../img/svg/credit.svg");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+
+.tabs__title {
+  margin-bottom: 35px;
+}
+
+.tabs__text {
+  max-width: 500px;
+  margin: 0;
 }
 
 /* DELIVERY-BONUS */
