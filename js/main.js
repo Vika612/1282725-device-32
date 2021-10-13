@@ -26,20 +26,12 @@ bullets.forEach((bullet) => {
   });
 });
 
-
 const calculateCoord = (k) => -(itemWidth * k);
-
-
-items.forEach((item) => {
-  item.style.minWidth = `${itemWidth}px`;
-});
-
 
 const switchActiveBullet = (index) => {
   document.querySelector('.promo-slider__btn--active').classList.remove('promo-slider__btn--active');
   bullets[index].classList.add('promo-slider__btn--active');
 };
-
 
 btnNext.addEventListener('click', () => {
 
@@ -56,7 +48,6 @@ btnNext.addEventListener('click', () => {
   };
 });
 
-
 btnPrev.addEventListener('click', () => {
 
   let indexActiveBullet = Array.from(bullets).indexOf(document.querySelector('.promo-slider__btn--active'));
@@ -71,11 +62,9 @@ btnPrev.addEventListener('click', () => {
   };
 });
 
-
 const setPosition = () => {
   track.style.transform = `translateX(${position}px)`
 };
-
 
 const checkBtns = () => {
   btnPrev.disabled = position === 0;
@@ -87,25 +76,21 @@ checkBtns();
 
 /* TABS */
 
-const tabNavs = document.querySelectorAll(".button--tab");
-const tabPanes = document.querySelectorAll(".tabs__item-content");
+const tabNavs = document.querySelectorAll('.button--tab');
 
-for (let i = 0; i < tabNavs.length; i++) {
+tabNavs.forEach((tabNav) => {
 
-  tabNavs[i].addEventListener("click", function(e){
+  tabNav.addEventListener('click', (e) => {
     e.preventDefault();
-    const activeTabAttr = e.target.getAttribute("data-tab");
+    const activeTabAttr = e.target.dataset.tab;
 
-    for (let j = 0; j < tabNavs.length; j++) {
-      const contentAttr = tabPanes[j].getAttribute("data-tab-content");
+    document.querySelector('.button--tab.active').classList.remove('active');
+    document.querySelector('.tabs__item-content.active').classList.remove('active');
 
-      if (activeTabAttr === contentAttr) {
-        tabNavs[j].classList.add("active");
-        tabPanes[j].classList.add("active");
-      } else {
-        tabNavs[j].classList.remove("active");
-        tabPanes[j].classList.remove("active");
-      }
-    };
+    tabNav.classList.add('active');
+
+    const activeScreen = `.tabs__item-content--${activeTabAttr}`;
+
+    document.querySelector(activeScreen).classList.add('active');
   });
-}
+});
