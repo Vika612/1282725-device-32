@@ -22,13 +22,13 @@
               </form>
               <ul class="user-menu__list">
                 <li class="user-menu__item">
-                  <a class="user-menu__link" href="#">Войти</a>
+                  <a class="user-menu__link user-menu__link--in" href="#">Войти</a>
                 </li>
                 <li class="user-menu__item">
-                  <a class="user-menu__link" href="#">Сравнить</a>
+                  <a class="user-menu__link user-menu__link--compare" href="#">Сравнить</a>
                 </li>
                 <li class="user-menu__item">
-                  <a class="user-menu__link" href="#"><span>2</span>Корзина</a>
+                  <a class="user-menu__link user-menu__link--cart" href="#"><span>2</span>Корзина</a>
                   <div class="shopping-cart">
                     <ul class="shopping-cart__list">
                       <li class="shopping-cart__item">
@@ -55,36 +55,47 @@
             </div>
             <div class="header__main-menu main-menu">
               <ul class="main-menu__list">
-                <li class="main-menu__item main-menu__item--catalog sub-menu"><a class="main-menu__link">Каталог товаров</a>
-                  <ul class="sub-menu__list">
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="#">Виртуальная реальность</a>
+                <li class="main-menu__item main-menu__item--catalog sub-menu">
+                  <a class="sub-menu__title" href="#">Каталог товаров</a><span></span>
+                  <div class="sub-menu__wrapper">
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="#">Виртуальная реальность</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="inner.html">Моноподы для cелфи</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="#">Экшн-камеры</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="#">Фитнес-браслеты</a>
+                      </li>
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="#">Умные часы</a>
+                      </li>
+                    </ul>
+                    <ul class="sub-menu__list">
+                      <li class="sub-menu__item">
+                        <a class="sub-menu__link" href="#">Квадрокоптеры</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-menu__item sub-info">
+                  <ul class="sub-info__list">
+                    <li class="sub-info__item">
+                      <a class="sub-info__link" href="#">Доставка</a>
                     </li>
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="inner.html">Моноподы для cелфи</a>
+                    <li class="sub-info__item">
+                      <a class="sub-info__link" href="#">Гарантия</a>
                     </li>
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="#">Экшн-камеры</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="#">Фитнес-браслеты</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="#">Умные часы</a>
-                    </li>
-                    <li class="sub-menu__item">
-                      <a class="sub-menu__link" href="#">Квадрокоптеры</a>
+                    <li class="sub-info__item">
+                      <a class="sub-info__link" href="#">Контакты</a>
                     </li>
                   </ul>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Доставка</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Гарантия</a>
-                </li>
-                <li class="main-menu__item">
-                  <a class="main-menu__link" href="#">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -214,29 +225,29 @@
             <div class="services__tabs tabs">
               <ul class="tabs__triggers">
                 <li class="tabs__item">
-                  <a class="tabs__link button button--tab active" href="#tab-1">Доставка</a>
+                  <a class="tabs__link button button--tab active" data-tab="delivery" tabindex="0">Доставка</a>
                 </li>
                 <li class="tabs__item">
-                  <a class="tabs__link button button--tab" href="#tab-2">Гарантия</a>
+                  <a class="tabs__link button button--tab" data-tab="warranty" tabindex="0">Гарантия</a>
                 </li>
                 <li class="tabs__item">
-                  <a class="tabs__link button button--tab" href="#tab-3">Кредит</a>
+                  <a class="tabs__link button button--tab" data-tab="credit" tabindex="0">Кредит</a>
                 </li>
               </ul>
               <ul class="tabs__content">
-                <li class="tabs__item-content tabs__item-content--delivery" id="tab-1">
+                <li class="tabs__item-content tabs__item-content--delivery active">
                   <h3 class="tabs__title title">Доставка</h3>
                   <p class="tabs__text">
-                    Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+                    Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
                   </p>
                 </li>
-                <li class="tabs__item-content tabs__item-content--warranty" id="tab-2">
+                <li class="tabs__item-content tabs__item-content--warranty">
                   <h3 class="tabs__title title">Гарантия</h3>
                   <p class="tabs__text">
                     Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
                   </p>
                 </li>
-                <li class="tabs__item-content tabs__item-content--credit" id="tab-3">
+                <li class="tabs__item-content tabs__item-content--credit">
                   <h3 class="tabs__title title">Кредит</h3>
                   <p class="tabs__text">
                     Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.

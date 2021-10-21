@@ -1,3 +1,5 @@
+'use strict';
+
 /*  SLIDER */
 
 let position = 0;
@@ -24,20 +26,12 @@ bullets.forEach((bullet) => {
   });
 });
 
-
 const calculateCoord = (k) => -(itemWidth * k);
-
-
-items.forEach((item) => {
-  item.style.minWidth = `${itemWidth}px`;
-});
-
 
 const switchActiveBullet = (index) => {
   document.querySelector('.promo-slider__btn--active').classList.remove('promo-slider__btn--active');
   bullets[index].classList.add('promo-slider__btn--active');
 };
-
 
 btnNext.addEventListener('click', () => {
 
@@ -54,7 +48,6 @@ btnNext.addEventListener('click', () => {
   };
 });
 
-
 btnPrev.addEventListener('click', () => {
 
   let indexActiveBullet = Array.from(bullets).indexOf(document.querySelector('.promo-slider__btn--active'));
@@ -69,11 +62,9 @@ btnPrev.addEventListener('click', () => {
   };
 });
 
-
 const setPosition = () => {
   track.style.transform = `translateX(${position}px)`
 };
-
 
 const checkBtns = () => {
   btnPrev.disabled = position === 0;
@@ -81,3 +72,25 @@ const checkBtns = () => {
 };
 
 checkBtns();
+
+
+/* TABS */
+
+const tabNavs = document.querySelectorAll('.button--tab');
+
+tabNavs.forEach((tabNav) => {
+
+  tabNav.addEventListener('click', (e) => {
+    e.preventDefault();
+    const activeTabAttr = e.target.dataset.tab;
+
+    document.querySelector('.button--tab.active').classList.remove('active');
+    document.querySelector('.tabs__item-content.active').classList.remove('active');
+
+    tabNav.classList.add('active');
+
+    const activeScreen = `.tabs__item-content--${activeTabAttr}`;
+
+    document.querySelector(activeScreen).classList.add('active');
+  });
+});

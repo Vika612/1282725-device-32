@@ -9,7 +9,7 @@
 <body>
   <div class="page">
     <header class="header">
-      <div class="header__wrapper container">
+      <div class="header__wrapper header__wrapper--inner container">
         <a class="header__logo" href="index.html">
           <img src="img/svg/logo-device.svg" width="145" height="36" alt="Логотип интернет-магазин 'Device'">
         </a>
@@ -21,10 +21,7 @@
               <button type="submit">Найти</button>
             </form>
             <ul class="user-menu__list">
-              <li class="user-menu__item">
-                <a class="user-menu__link" href="#">Коля Петухов</a>
-              </li>
-              <li class="user-menu__item">
+              <li class="user-menu__item">Коля Петухов
                 <a class="user-menu__link" href="#">Выйти</a>
               </li>
               <li class="user-menu__item">
@@ -58,36 +55,47 @@
           </div>
           <div class="header__main-menu main-menu">
             <ul class="main-menu__list">
-              <li class="main-menu__item main-menu__item--catalog sub-menu">Каталог товаров
-                <ul class="sub-menu__list">
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Виртуальная реальность</a>
+              <li class="main-menu__item main-menu__item--catalog sub-menu">
+                <a class="sub-menu__title" href="#">Каталог товаров</a><span></span>
+                <div class="sub-menu__wrapper">
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="#">Виртуальная реальность</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="inner.html">Моноподы для cелфи</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="#">Экшн-камеры</a>
+                    </li>
+                  </ul>
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+                  <ul class="sub-menu__list">
+                    <li class="sub-menu__item">
+                      <a class="sub-menu__link" href="#">Квадрокоптеры</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="main-menu__item sub-info">
+                <ul class="sub-info__list">
+                  <li class="sub-info__item">
+                    <a class="sub-info__link" href="#">Доставка</a>
                   </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Моноподы для cелфи</a>
+                  <li class="sub-info__item">
+                    <a class="sub-info__link" href="#">Гарантия</a>
                   </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Экшн-камеры</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Умные часы</a>
-                  </li>
-                  <li class="sub-menu__item">
-                    <a class="sub-menu__link" href="#">Квадрокоптеры</a>
+                  <li class="sub-info__item">
+                    <a class="sub-info__link" href="#">Контакты</a>
                   </li>
                 </ul>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="#">Доставка</a>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="#">Гарантия</a>
-              </li>
-              <li class="main-menu__item">
-                <a class="main-menu__link" href="#">Контакты</a>
               </li>
             </ul>
           </div>
