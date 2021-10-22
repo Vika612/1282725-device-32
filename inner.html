@@ -21,14 +21,15 @@
               <button type="submit">Найти</button>
             </form>
             <ul class="user-menu__list">
-              <li class="user-menu__item">Коля Петухов
-                <a class="user-menu__link" href="#">Выйти</a>
+              <li class="user-menu__item user-menu__item--inner">
+                <a class="user-menu__link user-menu__link--in">Коля Петухов</a>
+                <a class="user-menu__link user-menu__link--exit" href="#">Выйти</a>
               </li>
               <li class="user-menu__item">
-                <a class="user-menu__link" href="#">Сравнить</a>
+                <a class="user-menu__link user-menu__link--compare" href="#">Сравнить</a>
               </li>
               <li>
-                <a class="user-menu__link" href="#"><span>2</span>Корзина</a>
+                <a class="user-menu__link user-menu__link--cart" href="#"><span>2</span>Корзина</a>
                 <div class="shopping-cart">
                   <ul class="shopping-cart__list">
                     <li class="shopping-cart__item">
@@ -104,7 +105,7 @@
     </header>
 
     <main class="main inner">
-      <div class="container">
+      <div class="inner__wrapper container">
         <h1 class="inner__title title">Моноподы для селфи</h1>
         <ul class="inner__breadcrumbs breadcrumbs">
           <li class="breadcrumbs__item">
@@ -119,11 +120,11 @@
         </ul>
       </div>
 
-      <section class="inner__catalog">
-        <div class="inner__wrapper container">
+      <section class="inner__content inner-content">
+        <div class="inner-content__wrapper container">
           <h2 class="visually-hidden">Каталог товаров</h2>
 
-          <section class="inner__filter filter">
+          <section class="inner-content__filter filter">
             <h2 class="filter__title">фильтр:</h2>
             <form class="filter__form" action="#">
               <fieldset class="filter__field">
@@ -194,7 +195,7 @@
             </form>
           </section>
 
-          <section class="inner__catalog catalog">
+          <section class="inner-content__catalog catalog">
             <div class="catalog__sort sort">
               <h2 class="sort__title">сортировка:</h2>
               <select class="sort__list">
