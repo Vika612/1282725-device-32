@@ -428,6 +428,7 @@ body {
   margin-left: 0;
   margin-right: auto;
   display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -472,7 +473,7 @@ body {
 
 .sub-menu__title,
 .sub-info__link {
-  padding: 14px 20px;
+  padding: 11px 20px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -494,11 +495,11 @@ body {
 
 .sub-menu__wrapper {
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: -40px;
   z-index: 1;
   width: 1160px;
-  padding: 20px 45px 45px;
+  padding: 28px 45px 45px;
   display: flex;
   list-style: none;
   background-color: var(--yellow-light);
