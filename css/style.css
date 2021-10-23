@@ -1524,7 +1524,7 @@ body {
 /* FILTER */
 
 .filter {
-  margin-right: 70px;
+
   padding-left: 60px;
 }
 
@@ -1542,7 +1542,13 @@ body {
 }
 
 .filter__title {
+  width: 270px;
   margin-bottom: 70px;
+  padding-right: 70px;
+}
+
+.filter__form {
+  margin-right: 70px;
 }
 
 .filter__field-title {
