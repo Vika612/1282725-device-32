@@ -1602,15 +1602,66 @@ body {
   align-items: center;
 }
 
-.sort__list {
-  margin-right: auto;
-  border: 0;
+.sort__title {
+  margin-right: 28px;
 }
 
-.sort__list option {
+.sort__list {
+  margin-right: auto;
+  padding: 5px 15px;
   font-size: 16px;
   line-height: 1.2;
   color: var(--black);
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+.sort__list:focus {
+  outline: 5px solid var(--purple);
+}
+.sort__list:hover {
+  outline: none;
+  opacity: 0.6;
+}
+.sort__list:active {
+  opacity: 0.3;
+}
+
+.sort__arrow {
+  position: relative;
+  padding: 7px 9px;
+  border: none;
+  cursor: pointer;
+}
+.sort__arrow:focus {
+  outline: 5px solid var(--purple);
+}
+.sort__arrow:hover {
+  outline: none;
+  opacity: 0.5;
+}
+.sort__arrow:active {
+  opacity: 1;
+}
+
+.sort__arrow--up {
+  margin-right: -10px;
+}
+
+.sort__arrow--down {
+  margin: 0 -10px 0 11px;
+}
+
+.sort__arrow:disabled::before {
+  opacity: 0.2;
+}
+
+.sort__arrow--up::before {
+  content: url("../img/svg/sort-up.svg");
+}
+
+.sort__arrow--down::before {
+  content: url("../img/svg/sort-down.svg");
 }
 
 /* CARDS */
