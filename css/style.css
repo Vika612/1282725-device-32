@@ -230,7 +230,7 @@ body {
 
 .user-menu__form input {
   width: 100%;
-  padding: 10px 55px;
+  padding: 12px 155px 12px 55px;
   border: none;
   outline: none;
   background-color: transparent;
@@ -240,8 +240,10 @@ body {
   border-radius: 20px;
   outline: 2px solid var(--purple);
 }
-.user-menu__form input:active {
+.user-menu__form input:active,
+.user-menu__form input:valid {
   outline: 2px solid var(--black);
+  border-radius: 20px;
 }
 
 .user-menu__form input::placeholder {
@@ -263,7 +265,7 @@ body {
 .user-menu__form button {
   position: absolute;
   right: 0;
-  padding: 10px 50px;
+  padding: 12px 50px;
   border: none;
   outline: none;
   border-radius: 0px 20px 20px 0px;
@@ -283,7 +285,11 @@ body {
   background-color: var(--black);
 }
 .user-menu__form button:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.user-menu__form input:valid + button {
+  display: block;
 }
 
 .user-menu__list {
@@ -298,6 +304,12 @@ body {
 .user-menu__item--inner {
   display: flex;
   width: 240px;
+}
+
+.user-menu__item--inner .user-menu__link--in {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-menu__link {
@@ -434,13 +446,14 @@ body {
 
 .main-menu__item--catalog span {
   position: relative;
-  right: 0;
+  right: -3px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid var(--black);
   opacity: 0.2;
 }
+.main-menu__item--catalog:focus-within span,
 .main-menu__item--catalog:hover span {
   opacity: 1;
 }
@@ -461,6 +474,7 @@ body {
 .main-menu__item--catalog span::after {
   transform: rotate(90deg);
 }
+.main-menu__item--catalog:focus-within span::after,
 .main-menu__item--catalog:hover span::after {
   display: none;
 }
@@ -473,7 +487,7 @@ body {
 
 .sub-menu__title,
 .sub-info__link {
-  padding: 11px 20px;
+  padding: 11px 18px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
