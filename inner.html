@@ -127,10 +127,16 @@
           <section class="inner-content__filter filter">
             <h2 class="filter__title">фильтр:</h2>
             <form class="filter__form" action="#">
-              <fieldset class="filter__field">
-                <legend class="filter__field-title">Стоимость</legend>
-                <input type="range" min="0" max="9000" value="5000" id="range">
-                <p><span>от 0</span> <span id="demo">до 5000</span></p>
+              <fieldset class="filter__field range">
+                <legend class="filter__field-title range__title">Стоимость</legend>
+                <div class="range__value-group">
+                  <label class="range__label" for="min-value">от</label>
+                  <input type="text" name="min-value" min="0" max="9000" value="0" id="min-value">
+                </div>
+                <div class="range__value-group">
+                  <label class="range__label" for="max-value">до</label>
+                  <input type="text" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                </div>
               </fieldset>
               <fieldset class="filter__field">
                 <legend class="filter__field-title">Цвет</legend>
@@ -240,7 +246,7 @@
                     <b class="card__btn button button--inner" >Подробнее</b>
                   </a>
                 </li>
-                <li class="cards__item card">
+                <li class="cards__item card product-new">
                   <a class="card__link" href="#">
                     <img class="card__img" src="img/catalog/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                     <div class="card__info">
