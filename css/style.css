@@ -1535,14 +1535,14 @@ body {
 /* CATALOG */
 
 .catalog {
-  padding-left: 70px;
+  padding-left: 82px;
   flex-grow: 1;
 }
 
 /* FILTER */
 
 .filter {
-  padding-left: 60px;
+  padding-left: 58px;
 }
 
 .filter__title,
@@ -1559,21 +1559,38 @@ body {
 }
 
 .filter__title {
-  width: 270px;
+  width: 260px;
   margin-bottom: 70px;
   padding-right: 70px;
 }
 
 .filter__form {
-  margin-right: 60px;
+  position: relative;
+  margin-right: 58px;
+  padding-bottom: 20px;
+}
+
+.filter__field {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+  border: none;
+}
+
+.filter__field--color {
+  margin-bottom: 18px;
 }
 
 .filter__field-title {
+  width: 100%;
+  margin-bottom: 5px;
+  padding-top: 14px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--black);
+  border-top: 2px solid var(--black);
 }
 
 .filter__field-list {
@@ -1581,14 +1598,56 @@ body {
   list-style: none;
 }
 
+.filter__field-item {
+  margin-bottom: 13px;
+}
+
 .filter__field-label {
+  position: relative;
+  padding-left: 40px;
   font-size: 16px;
   line-height: 1.2;
   color: var(--black);
   cursor: pointer;
 }
 
+.filter__field-check,
+.filter__field-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--black);
+  border-radius: 3px;
+}
+
+.filter__field-radio {
+  border-radius: 50%;
+}
+
+.filter__field-label input[type="checkbox"]:checked + .filter__field-check {
+  background-image: url("../img/svg/mark.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.filter__field-label input[type="radio"]:checked + .filter__field-radio::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--black);
+  border-radius: 50%;
+  content: "";
+}
+
 .filter__button {
+  position: absolute;
+  bottom: 0;
+  z-index: 6;
   width: 200px;
   padding: 15px 37px;
   border: none;
