@@ -487,7 +487,7 @@ body {
 
 .sub-menu__title,
 .sub-info__link {
-  padding: 11px 18px;
+  padding: 11px 17px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -557,24 +557,34 @@ body {
 /* SUB-INFO */
 
 .sub-info__list {
-  min-width: 540px;
+  width: 540px;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 140px 195px 140px;
-  column-gap: 20px;
+  grid-template-columns: 170px 1fr 170px;
+  /* column-gap: 20px; */
   list-style: none;
+}
+
+.sub-info__link {
+  position: relative;
 }
 
 .sub-info__link:focus {
   border-radius: 25px;
   outline: 2px solid var(--purple);
 }
-/* .sub-info__link:hover {
-  border-radius: 0;
-  outline: none;
-  border-bottom: 2px solid var(--black);
-} */
+
+.sub-info__link:hover::after {
+  position: absolute;
+  right: 18px;
+  left: 18px;
+  bottom: 8px;
+  height: 2px;
+  background-color: var(--black);
+  content: "";
+}
+
 .sub-info__link:active {
   opacity: 0.3;
 }
@@ -1353,6 +1363,7 @@ body {
 }
 
 .footer__info-link {
+  position: relative;
   padding: 10px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
@@ -1367,12 +1378,19 @@ body {
   outline: 2px solid var(--purple);
   border-radius: 25px;
 }
-/* .footer__info-link:hover {
+.footer__info-link:hover {
   color: var(--yellow-dark);
-  border-bottom: 2px solid var(--yellow-dark);
-  border-radius: 0;
-  outline: none;
-} */
+}
+.footer__info-link:hover::after {
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: 8px;
+  height: 2px;
+  background-color: var(--yellow-dark);
+  content: "";
+}
+
 .footer__info-link:active {
   opacity: 0.3;
 }
@@ -1609,6 +1627,7 @@ body {
   line-height: 1.2;
   color: var(--black);
   cursor: pointer;
+  outline: none;
 }
 
 .filter__field-check,
@@ -1620,6 +1639,7 @@ body {
   height: 20px;
   border: 2px solid var(--black);
   border-radius: 3px;
+  opacity: 0.2;
 }
 
 .filter__field-radio {
@@ -1630,6 +1650,7 @@ body {
   background-image: url("../img/svg/mark.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  opacity: 1;
 }
 
 .filter__field-label input[type="radio"]:checked + .filter__field-radio::after {
@@ -1641,7 +1662,11 @@ body {
   height: 8px;
   background-color: var(--black);
   border-radius: 50%;
+  opacity: 1;
   content: "";
+}
+.filter__field-label input[type="radio"]:checked + .filter__field-radio {
+  opacity: 1;
 }
 
 .filter__button {
