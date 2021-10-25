@@ -351,6 +351,7 @@ body {
 }
 
 .user-menu__link--cart {
+  position: relative;
   padding-left: 45px;
 }
 
@@ -396,8 +397,28 @@ body {
 /* SHOPPING-CART */
 
 .shopping-cart {
+  position: absolute;
+  top: 83px;
+  right: -20px;
+  z-index: 7;
+  width: 320px;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
   background-color: var(--black);
-  display: none;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+  visibility: hidden;
+}
+
+.shopping-cart::before {
+  position: absolute;
+  top: -5px;
+  left: 152px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--black);
+  transform: rotate(45deg);
+  content: "";
 }
 
 .shopping-cart__list,
@@ -408,12 +429,71 @@ body {
 
 .shopping-cart__item p,
 .shopping-cart__menu-list li {
+  margin: 0;
   font-size: 16px;
   line-height: 1.2;
   color: var(--white);
 }
 
+.shopping-cart__item {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+}
+
 .shopping-cart__link {
+  width: 245px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-cart__item img {
+  display: block;
+}
+
+.shopping-cart__item p {
+  width: 180px;
+  padding-right: 10px;
+}
+
+.shopping-cart__item button {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.shopping-cart__item button::before,
+.shopping-cart__item button::after {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 13px;
+  height: 2px;
+  background-color: var(--white);
+  content: "";
+}
+.shopping-cart__item button::before {
+  transform: rotate(45deg);
+}
+.shopping-cart__item button::after {
+  transform: rotate(-45deg);
+}
+
+.shopping-cart__menu-list {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+}
+
+.shopping-cart__btn {
+  padding: 15px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -421,7 +501,14 @@ body {
   letter-spacing: 0.2em;
   color: var(--black);
   background-color: var(--white);
+  text-align: center;
   text-transform: uppercase;
+
+}
+
+.user-menu__link--cart:hover + .shopping-cart,
+.user-menu__link--cart:focus + .shopping-cart {
+  visibility: visible;
 }
 
 /* MAIN-MENU */
