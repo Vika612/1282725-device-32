@@ -17,7 +17,7 @@
             <div class="header__user-menu user-menu">
               <form class="user-menu__form" action="https://echo.htmlacademy.ru" method="post">
                 <label for="search"></label>
-                <input id="search" type="search" name="search" placeholder="Поиск по сайту">
+                <input id="search" type="text" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
                 <button type="submit">Найти</button>
               </form>
               <ul class="user-menu__list">
@@ -27,28 +27,30 @@
                 <li class="user-menu__item">
                   <a class="user-menu__link user-menu__link--compare" href="#">Сравнить</a>
                 </li>
-                <li class="user-menu__item">
+                <li class="user-menu__item user-menu__item--cart">
                   <a class="user-menu__link user-menu__link--cart" href="#"><span>2</span>Корзина</a>
                   <div class="shopping-cart">
                     <ul class="shopping-cart__list">
                       <li class="shopping-cart__item">
-                        <img src="img/cart/product-1-small.jpg" width="41" height="43" alt="Любительская селфи-палка">
-                        <p>Любительская селфи-палка</p>
+                        <a class="shopping-cart__link" href="#">
+                          <img src="img/cart/product-1-small.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                          <p>Любительская селфи-палка</p>
+                        </a>
                         <button type="button" aria-label="удалить товар из корзины"></button>
                       </li>
                       <li class="shopping-cart__item">
-                        <img src="img/cart/product-2-small.jpg" width="41" height="43" alt="Профессиональная селфи-палка">
-                        <p>Профессиональная селфи-палка</p>
+                        <a class="shopping-cart__link" href="#">
+                          <img src="img/cart/product-2-small.jpg" width="41" height="43" alt="Профессиональная селфи-палка">
+                          <p>Профессиональная селфи-палка</p>
+                        </a>
                         <button type="button" aria-label="удалить товар из корзины"></button>
                       </li>
                     </ul>
-                    <div class="shopping-cart__menu">
-                      <ul class="shopping-cart__menu-list">
-                        <li class="shopping-cart__menu-item">Товаров:<span>2</span></li>
-                        <li class="shopping-cart__menu-item">Сумма: <span>2000 ₽</span></li>
-                      </ul>
-                      <a class="shopping-cart__link" href="#">Открыть корзину</a>
-                    </div>
+                    <ul class="shopping-cart__menu-list">
+                      <li class="shopping-cart__menu-item">Товаров: <span>2</span></li>
+                      <li class="shopping-cart__menu-item">Сумма: <span>2000 ₽</span></li>
+                    </ul>
+                    <a class="shopping-cart__btn" href="#">Открыть корзину</a>
                   </div>
                 </li>
               </ul>
@@ -311,7 +313,7 @@
             </p>
             <form class="subscription__form" action="http://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="subscribe-email">Пожалуйста, укажите Ваш e-mail</label>
-              <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" autocomplete="off">
+              <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" autocomplete="off" required>
               <button class="button" type="submit">Подписаться</button>
             </form>
             <span class="subscription__note">Это бесплатно</span>
@@ -402,23 +404,25 @@
     </div>
 
 
-  <!--<div class="modal">
+  <!-- <div class="modal">
       <div class="modal__content">
         <h2 class="modal__title">Доставка под заказ</h2>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="modal__user-data">
-            <label for="fullname">Ваше имя:</label>
-            <input id="fullname" name="fullname" type="text" placeholder="Имя Фамилия">
-            <span>Пожалуйста, представьтесь</span>
-            <label for="email">Ваш e-mail:</label>
-            <input id="email" name="email" type="email" placeholder="krasotka92@mail.ru">
-            <span>Забавный у вас адрес</span>
-          </div>
-          <div class="modal__product">
-            <p class="modal__product-data">
+          <div class="modal__data">
+            <div class="modal__user-data">
+              <label for="fullname">Ваше имя:</label>
+              <input id="fullname" name="fullname" type="text" placeholder="Имя Фамилия">
+              <span>Пожалуйста, представьтесь</span>
+            </div>
+            <div class="modal__contact-data">
+              <label for="email">Ваш e-mail:</label>
+              <input id="email" name="email" type="email" placeholder="krasotka92@mail.ru">
+              <span>Забавный у вас адрес</span>
+            </div>
+            <div class="modal__product-data">
               <label for="message">Что нужно привезти:</label>
               <textarea name="message" id="message" placeholder="В свободной форме"></textarea>
-            </p>
+            </div>
             <div class="modal__product-counter counter">
               <label for="number">Количество:</label>
               <p><span>Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span></p>
@@ -430,7 +434,7 @@
         </form>
         <button class="modal__close" type="button" aria-label="закрыть форму"></button>
       </div>
-    </div>-->
+    </div> -->
 
     <script src="js/main.js"></script>
   </body>

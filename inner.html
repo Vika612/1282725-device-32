@@ -17,39 +17,41 @@
           <div class="header__user-menu user-menu">
             <form class="user-menu__form" action="https://echo.htmlacademy.ru" method="post">
               <label for="search"></label>
-              <input id="search" type="search" name="search" placeholder="Поиск по сайту">
+              <input id="search" type="text" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
               <button type="submit">Найти</button>
             </form>
             <ul class="user-menu__list">
               <li class="user-menu__item user-menu__item--inner">
-                <a class="user-menu__link user-menu__link--in">Коля Петухов</a>
+                <a class="user-menu__link user-menu__link--in" href="#" title="Коля Петухов">Коля Петухов</a>
                 <a class="user-menu__link user-menu__link--exit" href="#">Выйти</a>
               </li>
               <li class="user-menu__item">
                 <a class="user-menu__link user-menu__link--compare" href="#">Сравнить</a>
               </li>
-              <li>
+              <li class="user-menu__item user-menu__item--cart">
                 <a class="user-menu__link user-menu__link--cart" href="#"><span>2</span>Корзина</a>
                 <div class="shopping-cart">
                   <ul class="shopping-cart__list">
                     <li class="shopping-cart__item">
-                      <img src="img/cart/product-1-small.jpg" width="41" height="43" alt="Любительская селфи-палка">
-                      <p>Любительская селфи-палка</p>
+                      <a class="shopping-cart__link" href="#">
+                        <img src="img/cart/product-1-small.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                        <p>Любительская селфи-палка</p>
+                      </a>
                       <button type="button" aria-label="удалить товар из корзины"></button>
                     </li>
                     <li class="shopping-cart__item">
-                      <img src="img/cart/product-2-small.jpg" width="41" height="43" alt="Профессиональная селфи-палка">
-                      <p>Профессиональная селфи-палка</p>
+                      <a class="shopping-cart__link" href="#">
+                        <img src="img/cart/product-2-small.jpg" width="41" height="43" alt="Профессиональная селфи-палка">
+                        <p>Профессиональная селфи-палка</p>
+                      </a>
                       <button type="button" aria-label="удалить товар из корзины"></button>
                     </li>
                   </ul>
-                  <div class="shopping-cart__menu">
-                    <ul class="shopping-cart__menu-list">
-                      <li class="shopping-cart__menu-item">Товаров:<span>2</span></li>
-                      <li class="shopping-cart__menu-item">Сумма: <span>2000 ₽</span></li>
-                    </ul>
-                    <a class="shopping-cart__link" href="#">Открыть корзину</a>
-                  </div>
+                  <ul class="shopping-cart__menu-list">
+                    <li class="shopping-cart__menu-item">Товаров: <span>2</span></li>
+                    <li class="shopping-cart__menu-item">Сумма: <span>2000 ₽</span></li>
+                  </ul>
+                  <a class="shopping-cart__btn" href="#">Открыть корзину</a>
                 </div>
               </li>
             </ul>
@@ -127,16 +129,22 @@
           <section class="inner-content__filter filter">
             <h2 class="filter__title">фильтр:</h2>
             <form class="filter__form" action="#">
-              <fieldset class="filter__field">
-                <legend class="filter__field-title">Стоимость</legend>
-                <input type="range" min="0" max="9000" value="5000" id="range">
-                <p><span>от 0</span> <span id="demo">до 5000</span></p>
+              <fieldset class="filter__field range">
+                <legend class="filter__field-title range__title">Стоимость</legend>
+                <div class="range__value-group">
+                  <label class="range__label" for="min-value">от</label>
+                  <input type="text" name="min-value" min="0" max="9000" value="0" id="min-value">
+                </div>
+                <div class="range__value-group">
+                  <label class="range__label" for="max-value">до</label>
+                  <input type="text" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                </div>
               </fieldset>
-              <fieldset class="filter__field">
+              <fieldset class="filter__field filter__field--color">
                 <legend class="filter__field-title">Цвет</legend>
                 <ul class="filter__field-list">
                   <li class="filter__field-item">
-                    <label class="filter__field-label">
+                    <label class="filter__field-label" tabindex="0">
                       <input class="visually-hidden" type="checkbox" name="black" checked>
                       <span class="filter__field-check"></span>
                       Черный
@@ -203,44 +211,52 @@
                 <option value="менее популярные">Менее популярные</option>
                 <option value="лучшее">Лучшее</option>
               </select>
-              <div class="sort__buttons">
-                <button type="button">По возрастанию</button>
-                <button type="button">По убыванию</button>
+              <div class="sort__arrows">
+                <button class="sort__arrow sort__arrow--up" type="button" aria-label="По возрастанию" disabled></button>
+                <button class="sort__arrow sort__arrow--down" type="button" aria-label="По убыванию"></button>
               </div>
             </div>
             <div class="catalog__cards cards">
               <ul class="cards__list">
-                <li class="cards__item">
-                  <img src="img/catalog/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                  <div class="cards__item-info">
-                    <h3 class="cards__item-title">Любительская селфи-палка</h3>
-                    <span>500 ₽</span>
-                  </div>
-                  <a class="cards__link button button--inner" href="#">Подробнее</a>
+                <li class="cards__item card">
+                  <a class="card__link" href="#">
+                    <img class="card__img" src="img/catalog/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                    <div class="card__info">
+                      <h3>Любительская селфи-палка</h3>
+                      <span>500 ₽</span>
+                    </div>
+                    <b class="card__btn button button--inner">Подробнее</b>
+                  </a>
                 </li>
-                <li class="cards__item">
-                  <img src="img/catalog/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
-                  <div class="cards__item-info">
-                    <h3 class="cards__item-title">Профессиональная селфи-палка </h3>
-                    <span>1 500 ₽</span>
-                  </div>
-                  <a class="cards__link button button--inner" href="#">Подробнее</a>
+                <li class="cards__item card">
+                  <a class="card__link" href="#">
+                    <img class="card__img" src="img/catalog/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка ">
+                    <div class="card__info">
+                      <h3>Профессиональная<br> селфи-палка</h3>
+                      <span>1 500 ₽</span>
+                    </div>
+                    <b class="card__btn button button--inner">Подробнее</b>
+                  </a>
                 </li>
-                <li class="cards__item">
-                  <img src="img/catalog/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                  <div class="cards__item-info">
-                    <h3 class="cards__item-title">Непотопляемая селфи-палка</h3>
-                    <span>2 500 ₽</span>
-                  </div>
-                  <a class="cards__link button button--inner" href="#">Подробнее</a>
+                <li class="cards__item card">
+                  <a class="card__link" href="#">
+                    <img class="card__img" src="img/catalog/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                    <div class="card__info">
+                      <h3>Непотопляемая<br> селфи-палка</h3>
+                      <span>2 500 ₽</span>
+                    </div>
+                    <b class="card__btn button button--inner" >Подробнее</b>
+                  </a>
                 </li>
-                <li class="cards__item">
-                  <img src="img/catalog/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                  <div class="cards__item-info">
-                    <h3 class="cards__item-title">Селфи-палка «Следуй за мной»</h3>
-                    <span>4 900 ₽</span>
-                  </div>
-                  <a class="cards__link button button--inner" href="#">Подробнее</a>
+                <li class="cards__item card product-new">
+                  <a class="card__link" href="#">
+                    <img class="card__img" src="img/catalog/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                    <div class="card__info">
+                      <h3>Селфи-палка «Следуй за мной»</h3>
+                      <span>4 900 ₽</span>
+                    </div>
+                    <b class="card__btn button button--inner">Подробнее</b>
+                  </a>
                 </li>
               </ul>
               <a class="cards__load" href="#">Загрузить еще</a>
