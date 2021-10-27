@@ -1838,7 +1838,7 @@ body {
   margin-bottom: 13px;
 }
 
-.filter__field-label {
+.filter__field-item label {
   position: relative;
   padding-left: 40px;
   font-size: 16px;
@@ -1846,45 +1846,6 @@ body {
   color: var(--black);
   cursor: pointer;
   outline: none;
-}
-
-.filter__field-check,
-.filter__field-radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--black);
-  border-radius: 3px;
-  opacity: 0.2;
-}
-
-.filter__field-radio {
-  border-radius: 50%;
-}
-
-.filter__field-label input[type="checkbox"]:checked + .filter__field-check {
-  background-image: url("../img/svg/mark.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  opacity: 1;
-}
-
-.filter__field-label input[type="radio"]:checked + .filter__field-radio::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background-color: var(--black);
-  border-radius: 50%;
-  opacity: 1;
-  content: "";
-}
-.filter__field-label input[type="radio"]:checked + .filter__field-radio {
-  opacity: 1;
 }
 
 .filter__button {
@@ -1895,6 +1856,156 @@ body {
   padding: 15px 37px;
   border: none;
   cursor: pointer;
+}
+
+/* CHECKBOX */
+
+.checkbox__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 2px solid var(--black);
+}
+
+.checkbox__label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url("../img/svg/check.svg") no-repeat;
+  display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+  display: block;
+}
+.checkbox__input:not(:checked) + .checkbox__label::before {
+  opacity: 0.2;
+}
+
+.checkbox__input:focus + .checkbox__label::after {
+  background: url("../img/svg/check-focus.svg") no-repeat;
+}
+.checkbox__input:focus + .checkbox__label::before {
+  border-color: var(--purple);
+  opacity: 1;
+}
+.checkbox__input:focus + .checkbox__label {
+  color: var(--purple);
+}
+
+.checkbox__input:hover:checked + .checkbox__label::after {
+  background: url("../img/svg/check.svg") no-repeat;
+  opacity: 0.5;
+}
+.checkbox__input:hover:checked + .checkbox__label::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.checkbox__input:hover:checked + .checkbox__label {
+  color: rgba(0, 0, 0, 0.5);
+}
+.checkbox__input:hover:focus:not(:checked) + .checkbox__label::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.checkbox__input:hover:not(:checked) + .checkbox__label {
+  color: var(--black);
+}
+
+.checkbox__input:active:checked + .checkbox__label::after {
+  opacity: 0.2;
+}
+.checkbox__input:active:checked + .checkbox__label::before,
+.checkbox__input:active:not(:checked) + .checkbox__label::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.checkbox__input:active:checked + .checkbox__label,
+.checkbox__input:active:not(:checked) + .checkbox__label {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* RADIO */
+
+.radio__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--black);
+}
+
+.radio__label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--black);
+  display: none;
+}
+
+.radio__input:checked + .radio__label::after {
+  display: block;
+}
+.radio__input:not(:checked) + .radio__label::before {
+  opacity: 0.2;
+}
+
+.radio__input:focus + .radio__label::after {
+  background-color: var(--purple);
+}
+.radio__input:focus + .radio__label::before {
+  border-color: var(--purple);
+}
+.radio__input:focus + .radio__label {
+  color: var(--purple);
+}
+
+.radio__input:hover + .radio__label::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.radio__input:hover + .radio__label::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.radio__input:hover + .radio__label {
+  color: rgba(0, 0, 0, 0.5);
+}
+.radio__input:hover:not(:checked) + .radio__label {
+  color: var(--black);
+}
+
+.radio__input:active + .radio__label::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.radio__input:active + .radio__label::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.radio__input:active + .radio__label {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 /* SORT */
@@ -2229,7 +2340,7 @@ body {
 
 .modal__title {
   width: 600px;
-  margin-bottom: 60px;
+  margin-bottom: 67px;
 }
 
 .modal__form {
@@ -2237,25 +2348,33 @@ body {
   flex-wrap: wrap;
 }
 
-.modal__data {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.modal__data label {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  cursor: pointer;
 }
 
-.modal__data--user {
-  width: 360px;
-  margin-right: 40px;
+.modal__data input::placeholder {
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+  opacity: 0.6;
 }
 
-.modal__data--contact {
-  width: 360px;
+.modal__data--contact input::placeholder {
+  opacity: 1;
 }
 
-.modal__data--product {
-  width: 560px;
-  margin-right: 40px;
+.modal__btn {
+  margin-top: 27px;
+  padding: 15px 30px;
+  border: none;
 }
 
 /* COUNTER */
@@ -2264,6 +2383,29 @@ body {
   width: 160px;
 }
 
-.counter__text span {
+.counter__text {
+  position: absolute;
+  width: 200px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--white);
+  background: var(--black);
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
   display: none;
+}
+
+.counter__text::before {
+  position: absolute;
+  top: -6px;
+  right: 50px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--black);
+  transform: rotate(45deg);
+  content: "";
+}
+
+.counter__quantity {
+  display: flex;
 }
