@@ -127,3 +127,39 @@ const popup = document.querySelector('.modal');
       document.body.style.overflow = 'visible';
     }
   });
+
+
+  /* COUNTER */
+
+  const counter = document.querySelector('.counter');
+  const input = document.getElementById('number');
+
+  const ACTION = {
+    PLUS: 'plus',
+    MINUS: 'minus'
+  };
+
+  const calculateItem = (action) => {
+
+  switch (action) {
+    case ACTION.PLUS:
+      input.value++;
+      break;
+    case ACTION.MINUS:
+      input.value--;
+      break;
+    }
+  };
+
+  counter.addEventListener('click', (e) => {
+    if (e.target.classList.contains('counter__button--increase')) {
+      calculateItem(ACTION.PLUS);
+    }
+
+    if (e.target.classList.contains('counter__button--decrease')) {
+
+      if (Number(input.value) !== 0) {
+      calculateItem(ACTION.MINUS);
+      }
+    }
+  });
