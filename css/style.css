@@ -2369,6 +2369,17 @@ body {
 .modal__data--product input {
   background-color: var(--light);
 }
+.modal__data--product input:focus {
+  outline: 5px solid var(--purple);
+}
+.modal__data--product input:hover {
+  outline: none;
+  background-color: var(--light-gray);
+}
+.modal__data--product input:valid {
+  outline: 3px solid var(--black);
+  background-color: var(--white)
+}
 
 .modal__data label {
   margin-bottom: 15px;
@@ -2386,9 +2397,6 @@ body {
   padding: 21px 20px;
   border: none;
   outline: none;
-}
-.modal__data input:focus {
-  outline: 5px solid var(--purple);
 }
 
 .modal__data input::placeholder {
@@ -2416,10 +2424,6 @@ body {
   border: none;
 }
 
-.error {
-  color: var(--red);
-}
-
 /* INPUT-TEXT */
 
 .input-text {
@@ -2431,6 +2435,15 @@ body {
   background-color: transparent;
   z-index: 2;
 }
+.input-text__input:focus {
+  outline: 5px solid var(--purple);
+}
+.input-text__input:hover {
+  outline: none;
+}
+.input-text__input:valid {
+  outline: 3px solid var(--black);
+}
 
 .input-text::before {
   content: "";
@@ -2441,6 +2454,9 @@ body {
   height: 100%;
   background-color: var(--light);
   z-index: 0;
+}
+.input-text:hover::before {
+  background-color: var(--light-gray);
 }
 
 .input-text__icon {
@@ -2504,9 +2520,10 @@ body {
   background-color: var(--yellow-light);
   border-radius: 50%;
   border: none;
+  outline: none;
   cursor: pointer;
 }
-.counter__info:hover + .counter__text{
+.counter__info:hover + .counter__text {
   display: block;
 }
 
@@ -2522,43 +2539,92 @@ body {
 }
 
 .counter__quantity {
+  position: relative;
   display: flex;
 }
 
 .counter__quantity input {
-  width: 60px;
+  width: 100%;
   height: 60px;
   padding: 0;
   text-align: center;
   background-color: var(--light);
 }
+.counter__quantity input:focus {
+  outline: 5px solid var(--purple);
+}
+.counter__quantity input:hover {
+  outline: none;
+  background-color: var(--light-gray);
+}
 
 .counter__button {
-  position: relative;
-  width: 60px;
-  height: 60px;
+  position: absolute;
+  top: 14px;
+  width: 32px;
+  height: 32px;
   display: block;
-  border: none;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-color: transparent;
+  outline: none;
   cursor: pointer;
 }
 
-.counter__button::before,
-.counter__button::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  background-color: var(--black);
-  opacity: 0.3;
-  transform: translate(-50%, -50%);
+.counter__button:focus {
+  border: 2px solid var(--purple);
+}
+.counter__button:hover {
+  border: 2px solid transparent;
+}
+.counter__button--decrease:hover::before,
+.counter__button--increase:hover::before,
+.counter__button--increase:hover::after {
+  opacity: 1;
+}
+.counter__button:active {
+  opacity: 0.1;
 }
 
-.counter__button::before {
+.counter__button--decrease {
+  left: 11px;
+}
+
+.counter__button--decrease::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 6px;
   width: 16px;
   height: 2px;
+  background-color: var(--black);
+  opacity: 0.3;
 }
 
-  .counter__button--increase::after {
+.counter__button--increase {
+  right: 11px;
+}
+
+.counter__button--increase::before,
+.counter__button--increase::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  width: 16px;
+  height: 2px;
+  background-color: var(--black);
+  opacity: 0.3;
+}
+
+.counter__button--increase::after {
+  top: 5px;
+  left: 13px;
   width: 2px;
   height: 16px;
 }
+
+.error {
+  color: var(--red);
+}
+
