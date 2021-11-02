@@ -239,7 +239,7 @@ body {
 }
 
 .header__user-menu {
-  margin-bottom: 17px;
+  margin-bottom: 16px;
 }
 
 /* USER-MENU */
@@ -628,7 +628,8 @@ body {
 
 .main-menu__item--catalog span {
   position: relative;
-  right: -3px;
+  top: -2px;
+  right: 1px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -669,7 +670,7 @@ body {
 
 .sub-menu__title,
 .sub-info__link {
-  padding: 11px 17px;
+  padding: 11px 16px;
   font-family: "Raleway", "Tahoma", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -745,9 +746,14 @@ body {
   width: 540px;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 170px 1fr 170px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
+}
+
+.sub-info__item--warranty {
+  transform: translateX(-30px);
 }
 
 .sub-info__link {
@@ -776,7 +782,7 @@ body {
 /* PROMO-SLIDER */
 
 .promo-slider {
-  margin-bottom: 65px;
+  margin-bottom: 63px;
 }
 
 .promo-slider__wrapper {
@@ -798,7 +804,7 @@ body {
 
 .promo-slider__btns {
   position: absolute;
-  top: 355px;
+  top: 352px;
   right: 60px;
   margin: 0;
   width: 80px;
@@ -866,7 +872,7 @@ body {
   min-height: 560px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
+  gap: 39px;
 }
 
 .slide::before {
@@ -901,15 +907,14 @@ body {
 }
 
 .slide__info {
-  padding-top: 123px;
-  padding-right: 10px;
+  padding: 123px 10px 0 0;
   display: flex;
   flex-direction: column;
 }
 
 .slide__info-title {
   max-height: 100px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   order: 0;
   overflow-y: hidden;
 }
@@ -948,13 +953,13 @@ body {
 .slide__link {
   order: 2;
   width: 220px;
-  padding: 15px 35px;
+  padding: 15px 35px 15px 40px;
 }
 
 /* CATEGORIES */
 
 .categories {
-  margin-bottom: 120px;
+  margin-bottom: 122px;
 }
 
 .categories__list {
@@ -1063,7 +1068,7 @@ body {
 .services {
   position: relative;
   z-index: 0;
-  margin-bottom: 90px;
+  margin-bottom: 92px;
   padding-bottom: 114px;
   background: linear-gradient(transparent 14%, var(--light) 14%);
 }
@@ -1084,12 +1089,12 @@ body {
   position: relative;
   width: 284px;
   margin: 0;
-  padding-top: 29px;
+  padding-top: 27px;
 }
 
 .tabs__triggers::after {
   position: absolute;
-  top: -51px;
+  top: -53px;
   right: 0;
   width: 7px;
   height: 319px;
@@ -1116,7 +1121,7 @@ body {
 .tabs__item-content {
   position: relative;
   width: 720px;
-  padding: 20px 220px 20px 0;
+  padding: 18px 220px 20px 0;
   display: none;
 }
 
@@ -1131,8 +1136,8 @@ body {
 }
 
 .tabs__item-content--delivery::before {
-  top: 34px;
-  right: 27px;
+  top: 32px;
+  right: 25px;
   background-image: url("../img/svg/delivery.svg");
   width: 136px;
   height: 164px;
@@ -1286,11 +1291,11 @@ body {
 }
 
 .info-company__item p {
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 
 .info-company__item h2 {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 
@@ -1330,8 +1335,8 @@ body {
 
 .about-us__link {
   max-width: 260px;
-  margin-top: 35px;
-  padding: 15px;
+  margin-top: 31px;
+  padding: 15px 15px 15px 18px;
 }
 
 /* CONTACTS */
@@ -1381,7 +1386,7 @@ body {
 .contacts__link {
   max-width: 260px;
   margin-top: 55px;
-  padding: 15px 30px;
+  padding: 15px 30px 15px 35px;
 }
 
 /* SUBSCRIPTION */
@@ -1391,7 +1396,7 @@ body {
 }
 
 .subscription__wrapper {
-  padding: 74px 0 131px;
+  padding: 74px 0 130px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1523,7 +1528,7 @@ body {
 .footer__info address {
   order: 0;
   width: 240px;
-  margin-right: 114px;
+  margin-right: 111px;
   font-style: normal;
   font-size: 16px;
   line-height: 1.2;
@@ -1654,7 +1659,7 @@ body {
 }
 
 .social__item {
-  margin: 8px;
+  margin: 7px;
 }
 
 .social__link {
