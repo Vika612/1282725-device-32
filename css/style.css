@@ -1364,7 +1364,7 @@ body {
   color: var(--dark);
   text-decoration: underline;
   outline: none;
-  order: 2px solid transparent;
+  border: 2px solid transparent;
 }
 .contacts__address a:focus {
   border: 2px solid var(--purple);
