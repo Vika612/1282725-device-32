@@ -1517,7 +1517,7 @@ body {
 .footer__info {
   margin-bottom: 42px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .footer__info address {
@@ -1555,7 +1555,7 @@ body {
 
 .footer__info-list {
   order: 1;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -1564,7 +1564,7 @@ body {
 }
 
 .footer__info-item {
-  margin-right: 7px;
+  margin-right: 3px;
 }
 
 .footer__info-link {
@@ -2080,7 +2080,7 @@ body {
 /* CARDS */
 
 .cards {
-  margin-bottom: 53px;
+  margin-bottom: 50px;
   padding-top: 55px;
 }
 
@@ -2217,7 +2217,7 @@ body {
 /* PAGINATOR */
 
 .paginator {
-  margin-bottom: 78px;
+  margin-bottom: 71px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2225,7 +2225,19 @@ body {
 }
 
 .paginator__link {
-  padding: 25px 29px;
+  padding: 22px 24px;
+  border: 5px solid transparent;
+}
+.paginator__link:focus {
+  background-color: var(--light);
+  border: 5px solid var(--purple);
+}
+.paginator__link:hover {
+  background-color: var(--gray);
+  border: 5px solid transparent;
+}
+.paginator__link:active {
+  opacity: 0.1;
 }
 
 .paginator__link--prev {
@@ -2252,11 +2264,18 @@ body {
   display: inline-block;
   font-size: 16px;
   line-height: 1.2;
-  color: rgba(68, 68, 68, 1);
+  color: rgba(68, 68, 68, 0.3);
   outline: none;
 }
 .paginator__num a:focus {
   outline: 5px solid var(--purple);
+}
+.paginator__num a:hover {
+  outline: none;
+  color: rgba(68, 68, 68, 1);
+}
+.paginator__num a:active {
+  color: rgba(68, 68, 68, 0.1);
 }
 
 
