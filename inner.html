@@ -131,13 +131,23 @@
             <form class="filter__form" action="#">
               <fieldset class="filter__field range">
                 <legend class="filter__field-title range__title">Стоимость</legend>
-                <div class="range__value-group">
-                  <label class="range__label" for="min-value">от</label>
-                  <input type="text" name="min-value" min="0" max="9000" value="0" id="min-value">
-                </div>
-                <div class="range__value-group">
-                  <label class="range__label" for="max-value">до</label>
-                  <input type="text" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                <div class="range__container">
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 0; width: 112px;">
+                      <button class="range__toggle range__toggle--min" type="button" aria-label="изменить минимальную цену"></button>
+                      <button class="range__toggle range__toggle--max" type="button" aria-label="изменить максимальную цену"></button>
+                    </div>
+                  </div>
+                  <div class="range__inputs">
+                    <div class="range__value-group">
+                      <label class="range__label" for="min-value">от</label>
+                      <input type="number" name="min-value" min="0" max="9000" value="0" id="min-value">
+                    </div>
+                    <div class="range__value-group">
+                      <label class="range__label" for="max-value">до</label>
+                      <input type="number" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="filter__field filter__field--color">

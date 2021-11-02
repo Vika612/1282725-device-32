@@ -30,7 +30,7 @@
 
 /* rubik-800 - latin_cyrillic */
 @font-face {
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -1861,6 +1861,91 @@ body {
   padding: 15px 37px;
   border: none;
   cursor: pointer;
+}
+
+/* RANGE */
+
+.range {
+  margin-bottom: 34px;
+}
+
+.range__title {
+  margin-bottom: 38px;
+}
+
+.range__scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 15px;
+  background-color: var(--gray);
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+  background-color: var(--black);
+}
+
+.range__toggle {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  outline: none;
+  cursor: pointer;
+}
+.range__toggle:focus {
+  border: 2px solid var(--purple);
+}
+.range__toggle:hover {
+  border: 2px solid var(--black);
+  background-color: var(--black);
+}
+
+.range__toggle--min {
+  top: -8px;
+  left: 0;
+}
+
+.range__toggle--max {
+  top: -8px;
+  right: -18px;
+}
+
+.range__inputs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.range__value-group {
+  font-family: "Rubik", "Tahoma", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.2;
+  opacity: 0.3;
+}
+
+.range__value-group {
+  width: 60px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.range__value-group input {
+  padding: 0 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  appearance: textfield;
+}
+
+.range__value-group input::-webkit-outer-spin-button,
+.range__value-group input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 /* CHECKBOX */
