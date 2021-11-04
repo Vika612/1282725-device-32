@@ -382,7 +382,7 @@ body {
 }
 .user-menu__link--exit:hover {
   opacity: 0.6;
-  order: 2px solid transparent;
+  border: 2px solid transparent;
 }
 
 .user-menu__link--cart {
