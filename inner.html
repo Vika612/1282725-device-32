@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Device</title>
+  <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="page">
     <header class="header">
       <div class="header__wrapper header__wrapper--inner container">
-        <a class="header__logo" href="index.html">
+        <a class="header__logo header__logo--inner" href="index.html">
           <img src="img/svg/logo-device.svg" width="145" height="36" alt="Логотип интернет-магазин 'Device'">
         </a>
         <nav class="header__menu">
@@ -92,7 +93,7 @@
                   <li class="sub-info__item">
                     <a class="sub-info__link" href="#">Доставка</a>
                   </li>
-                  <li class="sub-info__item">
+                  <li class="sub-info__item sub-info__item--warranty">
                     <a class="sub-info__link" href="#">Гарантия</a>
                   </li>
                   <li class="sub-info__item">
@@ -131,71 +132,60 @@
             <form class="filter__form" action="#">
               <fieldset class="filter__field range">
                 <legend class="filter__field-title range__title">Стоимость</legend>
-                <div class="range__value-group">
-                  <label class="range__label" for="min-value">от</label>
-                  <input type="text" name="min-value" min="0" max="9000" value="0" id="min-value">
-                </div>
-                <div class="range__value-group">
-                  <label class="range__label" for="max-value">до</label>
-                  <input type="text" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                <div class="range__container">
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 0; width: 112px;">
+                      <button class="range__toggle range__toggle--min" type="button" aria-label="изменить минимальную цену"></button>
+                      <button class="range__toggle range__toggle--max" type="button" aria-label="изменить максимальную цену"></button>
+                    </div>
+                  </div>
+                  <div class="range__inputs">
+                    <div class="range__value-group">
+                      <label class="range__label" for="min-value">от</label>
+                      <input type="number" name="min-value" min="0" max="9000" value="0" id="min-value">
+                    </div>
+                    <div class="range__value-group">
+                      <label class="range__label" for="max-value">до</label>
+                      <input type="number" name="max-value" min="0" max="9000" value="5000" id="max-value">
+                    </div>
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="filter__field filter__field--color">
                 <legend class="filter__field-title">Цвет</legend>
                 <ul class="filter__field-list">
-                  <li class="filter__field-item">
-                    <label class="filter__field-label" tabindex="0">
-                      <input class="visually-hidden" type="checkbox" name="black" checked>
-                      <span class="filter__field-check"></span>
-                      Черный
-                    </label>
+                  <li class="filter__field-item checkbox">
+                    <input class="visually-hidden checkbox__input" type="checkbox" name="black" id="black" checked>
+                    <label class="checkbox__label" for="black">Черный</label>
                   </li>
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="checkbox" name="white" checked>
-                      <span class="filter__field-check"></span>
-                      Белый
-                    </label>
+                  <li class="filter__field-item checkbox">
+                    <input class="visually-hidden checkbox__input" type="checkbox" name="white" id="white" checked>
+                    <label class="checkbox__label" for="white">Белый</label>
                   </li>
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="checkbox" name="blue">
-                      <span class="filter__field-check"></span>
-                      Синий
-                    </label>
+                  <li class="filter__field-item checkbox">
+                    <input class="visually-hidden checkbox__input" type="checkbox" name="blue" id="blue">
+                    <label class="checkbox__label" for="blue">Синий</label>
                   </li>
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="checkbox" name="red">
-                      <span class="filter__field-check"></span>
-                      Красный
-                    </label>
+                  <li class="filter__field-item checkbox">
+                    <input class="visually-hidden checkbox__input" type="checkbox" name="red" id="red">
+                    <label class="checkbox__label" for="red">Красный</label>
                   </li>
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="checkbox" name="pink">
-                      <span class="filter__field-check"></span>
-                      Розовый
-                    </label>
+                  <li class="filter__field-item checkbox">
+                    <input class="visually-hidden checkbox__input" type="checkbox" name="pink" id="pink">
+                    <label class="checkbox__label" for="pink">Розовый</label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="filter__field">
                 <legend class="filter__field-title">Bluetooth</legend>
                 <ul class="filter__field-list">
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="radio" name="bluetooth" checked>
-                      <span class="filter__field-radio"></span>
-                      Есть
-                    </label>
+                  <li class="filter__field-item radio">
+                    <input class="visually-hidden radio__input" type="radio" name="bluetooth" id="bluetooth" checked>
+                    <label class="radio__label" for="bluetooth">Есть</label>
                   </li>
-                  <li class="filter__field-item">
-                    <label class="filter__field-label">
-                      <input class="visually-hidden" type="radio" name="bluetooth">
-                      <span class="filter__field-radio"></span>
-                      Нет
-                    </label>
+                  <li class="filter__field-item radio">
+                    <input class="visually-hidden radio__input" type="radio" name="bluetooth" id="no-bluetooth">
+                    <label class="radio__label" for="no-bluetooth">Нет</label>
                   </li>
                 </ul>
               </fieldset>
@@ -279,7 +269,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper container">
-        <a class="footer__logo" href="index.html">
+        <a class="footer__logo footer__logo--inner" href="index.html">
           <svg width="145" height="36" viewBox="0 0 145 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.2 0V35.3H19.6V32.9C17.9 34.8 15.5 36 12.1 36C5.5 36 0 30.2 0 22.7C0 15.2 5.5 9.4 12.1 9.4C15.5 9.4 18 10.6 19.6 12.5V0H27.2ZM19.6 22.7C19.6 18.9 17.1 16.5 13.6 16.5C10.1 16.5 7.6 18.9 7.6 22.7C7.6 26.5 10.1 28.9 13.6 28.9C17.1 28.8 19.6 26.5 19.6 22.7Z"/>
             <path d="M43.7001 29.1999C45.8001 29.1999 47.5001 28.3999 48.5001 27.2999L54.6001 30.7999C52.1001 34.1999 48.4001 35.9999 43.6001 35.9999C35.0001 35.9999 29.6001 30.1999 29.6001 22.6999C29.6001 15.1999 35.0001 9.3999 43.0001 9.3999C50.4001 9.3999 55.8001 15.0999 55.8001 22.6999C55.8001 23.7999 55.7001 24.7999 55.5001 25.6999H37.6001C38.6001 28.2999 40.9001 29.1999 43.7001 29.1999ZM48.3001 20.0999C47.5001 17.1999 45.2001 16.0999 42.9001 16.0999C40.0001 16.0999 38.1001 17.4999 37.4001 20.0999H48.3001Z"/>
@@ -308,14 +298,14 @@
         <div class="footer__links">
           <ul class="footer__links-social social">
             <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">
+              <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy" aria-label="Facebook">
                 <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.5 3H9V0H5.6C2.8 0 2 1.7 2 4.2V6H0V9H2V18H5V9H8.3L8.9 6H5V4.5C5 3.7 5.3 3 6.5 3Z"/>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.instagram.com/htmlacademy/" aria-label="Instagram">
+              <a class="social__link social__link--insta" href="https://www.instagram.com/htmlacademy/" aria-label="Instagram">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"/>
                   <path d="M14.7 1.3C13.8 0.4 12.7 0 11.3 0H4.7C1.9 0 0 1.9 0 4.7V11.3C0 12.7 0.4 13.9 1.4 14.7C2.3 15.6 3.4 16 4.7 16H11.3C12.7 16 13.9 15.6 14.7 14.7C15.5 13.8 16 12.7 16 11.3V4.7C16 3.3 15.6 2.1 14.7 1.3ZM8 12.1C5.8 12.1 3.9 10.3 3.9 8C3.9 5.7 5.8 3.9 8 3.9C10.2 3.9 12.1 5.7 12.1 8C12.1 10.3 10.2 12.1 8 12.1ZM12.6 4.7C11.9 4.7 11.3 4.2 11.3 3.4C11.3 2.6 11.8 2.1 12.6 2.1C13.3 2.1 13.9 2.7 13.9 3.4C13.9 4.1 13.3 4.7 12.6 4.7Z"/>
@@ -323,7 +313,7 @@
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.twitter.com/htmlacademy_ru" aria-label="Twitter">
+              <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy_ru" aria-label="Twitter">
                 <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)">
                   <path d="M9.7 0.0999675C11.2 -0.400033 12.3 0.399967 12.9 1.19997C13.4 0.999967 14 0.799967 14.6 0.599967C14.6 1.39997 14.1 1.99997 13.8 2.19997C14.5 2.39997 15 1.79997 15 1.79997C14.9 2.69997 14.1 3.49997 13.6 3.69997C13.4 9.99997 10.8 14.1 4.7 14C4.2 14 4.8 14 4.3 14C4 14 0.6 13.6 0 12.2C2 12.4 3.4 11.8 4.1 11.1C3.3 10.8 1.7 10.7 1.5 8.29997C1.8 8.49997 2 8.59997 2.6 8.49997C1.5 7.69997 0.3 6.99997 0.4 4.99997C0.7 5.29997 1.3 5.49997 1.6 5.39997C1 5.19997 -0.2 2.29997 0.8 0.799967C2.4 2.49997 4.1 4.19997 7.1 4.29997C7.3 2.19997 8.1 0.799967 9.7 0.0999675Z"/>

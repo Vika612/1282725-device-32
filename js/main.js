@@ -94,3 +94,72 @@ tabNavs.forEach((tabNav) => {
     document.querySelector(activeScreen).classList.add('active');
   });
 });
+
+
+/* MODAL */
+
+const openBtn = document.querySelector('.delivery-bonus__link');
+const closeBtn = document.querySelector('.modal__close');
+const popup = document.querySelector('.modal');
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.classList.add('modal--show');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.classList.remove('modal--show');
+    document.body.style.overflow = 'visible';
+  });
+
+  popup.addEventListener('click', (e) => {
+    if (e.target.closest('.modal__content') === null) {
+      popup.classList.remove('modal--show');
+      document.body.style.overflow = 'visible';
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape') {
+      popup.classList.remove('modal--show');
+      document.body.style.overflow = 'visible';
+    }
+  });
+
+
+  /* COUNTER */
+
+  const counter = document.querySelector('.counter');
+  const input = document.getElementById('number');
+
+  const ACTION = {
+    PLUS: 'plus',
+    MINUS: 'minus'
+  };
+
+  const calculateItem = (action) => {
+
+  switch (action) {
+    case ACTION.PLUS:
+      input.value++;
+      break;
+    case ACTION.MINUS:
+      input.value--;
+      break;
+    }
+  };
+
+  counter.addEventListener('click', (e) => {
+    if (e.target.classList.contains('counter__button--increase')) {
+      calculateItem(ACTION.PLUS);
+    }
+
+    if (e.target.classList.contains('counter__button--decrease')) {
+
+      if (Number(input.value) !== 0) {
+      calculateItem(ACTION.MINUS);
+      }
+    }
+  });
