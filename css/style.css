@@ -1418,12 +1418,12 @@ body {
   justify-content: space-between;
 }
 
-.subscription__form input,
-.subscription__form button {
+.subscription__input,
+.subscription__button {
   background-color: transparent;
 }
 
-.subscription__form input {
+.subscription__input {
   width: 600px;
   font-size: 18px;
   line-height: 1.6;
@@ -1431,40 +1431,37 @@ body {
   outline: none;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
-.subscription__form input:hover {
+.subscription__input:hover {
   background-color: transparent;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
-.subscription__form input:focus {
+.subscription__input:focus {
   background-color: var(--gray);
   border-bottom: 3px solid var(--gray);
 }
-.subscription__form input:valid {
+.subscription__input:valid {
   background-color: transparent;
   border-bottom: 3px solid var(--black);
 }
-/* .subscription__form input:invalid {
-  border-bottom: 3px solid var(--red);
-} */
 
-.subscription__form input::placeholder {
+.subscription__input::placeholder {
   font-size: 18px;
   line-height: 1.6;
 }
 
-.subscription__form button {
+.subscription__button {
   padding: 15px 40px;
   border: 3px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.subscription__form button:focus {
+.subscription__button:focus {
   border: 3px solid var(--purple);
 }
-.subscription__form button:hover {
+.subscription__button:hover {
   color: var(--white);
   background-color: var(--black);
 }
-.subscription__form button:active {
+.subscription__button:active {
   color: rgba(255, 255, 255, 0.3);
   border: 3px solid var(--black);
 }
@@ -1477,6 +1474,10 @@ body {
   background-image: url("../img/svg/tick-subscrib.svg");
   background-repeat: no-repeat;
   background-position: 0 50%;
+}
+
+.subscription__input--error {
+  border-bottom: 3px solid var(--red);
 }
 
 /* FOOTER */
