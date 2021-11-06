@@ -1418,12 +1418,12 @@ body {
   justify-content: space-between;
 }
 
-.subscription__form input,
-.subscription__form button {
+.subscription__input,
+.subscription__button {
   background-color: transparent;
 }
 
-.subscription__form input {
+.subscription__input {
   width: 600px;
   font-size: 18px;
   line-height: 1.6;
@@ -1431,40 +1431,37 @@ body {
   outline: none;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
-.subscription__form input:hover {
+.subscription__input:hover {
   background-color: transparent;
   border-bottom: 3px solid rgba(0, 0, 0, 0.2);
 }
-.subscription__form input:focus {
+.subscription__input:focus {
   background-color: var(--gray);
   border-bottom: 3px solid var(--gray);
 }
-.subscription__form input:valid {
+.subscription__input:valid {
   background-color: transparent;
   border-bottom: 3px solid var(--black);
 }
-/* .subscription__form input:invalid {
-  border-bottom: 3px solid var(--red);
-} */
 
-.subscription__form input::placeholder {
+.subscription__input::placeholder {
   font-size: 18px;
   line-height: 1.6;
 }
 
-.subscription__form button {
+.subscription__button {
   padding: 15px 40px;
   border: 3px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.subscription__form button:focus {
+.subscription__button:focus {
   border: 3px solid var(--purple);
 }
-.subscription__form button:hover {
+.subscription__button:hover {
   color: var(--white);
   background-color: var(--black);
 }
-.subscription__form button:active {
+.subscription__button:active {
   color: rgba(255, 255, 255, 0.3);
   border: 3px solid var(--black);
 }
@@ -1477,6 +1474,10 @@ body {
   background-image: url("../img/svg/tick-subscrib.svg");
   background-repeat: no-repeat;
   background-position: 0 50%;
+}
+
+.subscription__input--error {
+  border-bottom: 3px solid var(--red);
 }
 
 /* FOOTER */
@@ -2474,22 +2475,7 @@ body {
   margin-right: 40px;
 }
 
-.modal__data--product input {
-  background-color: var(--light);
-}
-.modal__data--product input:focus {
-  outline: 5px solid var(--purple);
-}
-.modal__data--product input:hover {
-  outline: none;
-  background-color: var(--light-gray);
-}
-.modal__data--product input:valid {
-  outline: 3px solid var(--black);
-  background-color: var(--white)
-}
-
-.modal__data label {
+.modal__label {
   margin-bottom: 15px;
   font-weight: 700;
   font-size: 18px;
@@ -2500,14 +2486,51 @@ body {
   cursor: pointer;
 }
 
-.modal__data input {
+.modal__input-wrap {
+  position: relative;
+}
+
+.modal__input-wrap::after {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  content: "";
+}
+
+.modal__input-wrap--user::after {
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/svg/icon-user.svg");
+}
+
+.modal__input-wrap--contact::after {
+  width: 15px;
+  height: 12px;
+  background-image: url("../img/svg/icon-mail.svg");
+}
+
+.modal__input {
   width: 100%;
   padding: 21px 20px;
   border: none;
   outline: none;
+  background-color: var(--light);
+}
+.modal__input:focus {
+  outline: 5px solid var(--purple);
+}
+.modal__input:hover {
+  outline: none;
+  background-color: var(--light-gray);
+}
+.modal__input:valid {
+  outline: 3px solid var(--black);
+  background-color: var(--white)
 }
 
-.modal__data input::placeholder {
+.modal__input::placeholder {
   font-family: "Rubik", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -2532,59 +2555,13 @@ body {
   border: none;
 }
 
-/* INPUT-TEXT */
-
-.input-text {
-  position: relative;
+.modal__input--error {
+  outline: 3px solid var(--red);
+  background-color: var(--white)
 }
 
-.input-text__input {
-  position: relative;
-  background-color: transparent;
-  z-index: 2;
-}
-.input-text__input:focus {
-  outline: 5px solid var(--purple);
-}
-.input-text__input:hover {
-  outline: none;
-}
-.input-text__input:valid {
-  outline: 3px solid var(--black);
-}
-
-.input-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light);
-  z-index: 0;
-}
-.input-text:hover::before {
-  background-color: var(--light-gray);
-}
-
-.input-text__icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  opacity: 0.2;
-  z-index: 1;
-}
-
-.input-text__icon--user {
-  width: 13px;
-  height: 12px;
-  background: url("../img/svg/icon-user.svg") no-repeat;
-}
-
-.input-text__icon--contact {
-  width: 15px;
-  height: 12px;
-  background: url("../img/svg/icon-mail.svg") no-repeat;
+.modal__note--error {
+  color: var(--red);
 }
 
 /* COUNTER */
@@ -2652,18 +2629,9 @@ body {
 }
 
 .counter__quantity input {
-  width: 100%;
   height: 60px;
   padding: 0;
   text-align: center;
-  background-color: var(--light);
-}
-.counter__quantity input:focus {
-  outline: 5px solid var(--purple);
-}
-.counter__quantity input:hover {
-  outline: none;
-  background-color: var(--light-gray);
 }
 
 .counter__button {
@@ -2731,8 +2699,3 @@ body {
   width: 2px;
   height: 16px;
 }
-
-.error {
-  color: var(--red);
-}
-

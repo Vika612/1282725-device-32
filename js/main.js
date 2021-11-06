@@ -158,7 +158,7 @@ const popup = document.querySelector('.modal');
 
     if (e.target.classList.contains('counter__button--decrease')) {
 
-      if (Number(input.value) !== 0) {
+      if (Number(input.value) !== 1) {
       calculateItem(ACTION.MINUS);
       }
     }

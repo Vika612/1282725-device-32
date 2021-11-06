@@ -314,8 +314,8 @@
             </p>
             <form class="subscription__form" action="http://echo.htmlacademy.ru" method="POST">
               <label class="visually-hidden" for="subscribe-email">Пожалуйста, укажите Ваш e-mail</label>
-              <input type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" autocomplete="off" required>
-              <button class="button" type="submit">Подписаться</button>
+              <input class="subscription__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" autocomplete="off" required>
+              <button class="subscription__button button" type="submit">Подписаться</button>
             </form>
             <span class="subscription__note">Это бесплатно</span>
           </div>
@@ -410,32 +410,30 @@
         <h2 class="modal__title title">Доставка под заказ</h2>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="modal__data modal__data--user">
-            <label for="fullname">Ваше имя:</label>
-            <div class="input-text">
-              <input class="input-text__input" id="fullname" name="fullname" type="text" placeholder="Имя Фамилия" autocomplete="off" required>
-              <em class="input-text__icon input-text__icon--user"></em>
+            <label class="modal__label" for="fullname">Ваше имя:</label>
+            <div class="modal__input-wrap modal__input-wrap--user">
+              <input class="modal__input" id="fullname" name="fullname" type="text" placeholder="Имя Фамилия" autocomplete="off" required>
             </div>
-            <span class="modal__note">Пожалуйста, представьтесь</span>
+            <span class="modal__note modal__note--error">Пожалуйста, представьтесь</span>
           </div>
           <div class="modal__data modal__data--contact">
-            <label for="email">Ваш e-mail:</label>
-            <div class="input-text">
-              <input class="input-text__input" id="email" name="email" type="email" placeholder="krasotka92@mail.ru" autocomplete="off" required>
-              <em class="input-text__icon input-text__icon--contact"></em>
+            <label class="modal__label" for="email">Ваш e-mail:</label>
+            <div class="modal__input-wrap modal__input-wrap--contact">
+              <input class="modal__input" id="email" name="email" type="email" placeholder="krasotka92@mail.ru" autocomplete="off" required>
             </div>
             <span class="modal__note">Забавный у вас адрес</span>
           </div>
           <div class="modal__data modal__data--product">
-            <label for="message">Что нужно привезти:</label>
-            <input type="text" name="message" id="message" placeholder="В свободной форме" autocomplete="off" required>
+            <label class="modal__label" for="message">Что нужно привезти:</label>
+            <input class="modal__input" type="text" name="message" id="message" placeholder="В свободной форме" autocomplete="off" required>
           </div>
           <div class="modal__data counter">
-            <label for="number">Количество:</label>
+            <label class="modal__label" for="number">Количество:</label>
             <button class="counter__info" type="button" aria-label="дополнительная информация"></button>
             <p class="counter__text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.</p>
             <div class="counter__quantity">
               <button class="counter__button counter__button--decrease" type="button" aria-label="удалить товар"></button>
-              <input type="text" name="number" id="number" value="1" readonly>
+              <input class="counter__input modal__input" type="text" name="number" id="number" value="1" readonly>
               <button class="counter__button counter__button--increase" type="button" aria-label="добавить товар"></button>
             </div>
           </div>
