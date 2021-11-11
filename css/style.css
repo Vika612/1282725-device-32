@@ -840,8 +840,13 @@ body {
 
 .promo-slider__arrow {
   position: absolute;
-  top: 248px;
-  left: 13px;
+  top: 243px;
+  left: 10px;
+  width: 40px;
+  height: 80px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-color: transparent;
   border: 2px solid transparent;
   outline: none;
@@ -859,8 +864,13 @@ body {
   opacity: 0.3;
 }
 
+.promo-slider__arrow--prev {
+  background-image: url("../img/svg/arrow-prev.svg");
+}
+
 .promo-slider__arrow--next {
-  left: 515px;
+  left: 510px;
+  background-image: url("../img/svg/arrow-next.svg");
 }
 
 /* SLIDE */
@@ -1522,7 +1532,6 @@ body {
 .footer__info {
   margin-bottom: 42px;
   display: flex;
-  /* align-items: center; */
 }
 
 .footer__info address {
