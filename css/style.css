@@ -803,7 +803,7 @@ body {
 
 .promo-slider__btns {
   position: absolute;
-  top: 352px;
+  bottom: 183px;
   right: 60px;
   margin: 0;
   width: 80px;
@@ -922,14 +922,12 @@ body {
 }
 
 .slide__info-title {
-  max-height: 100px;
   margin-bottom: 29px;
   order: 0;
   overflow-y: hidden;
 }
 
 .slide__info-text {
-  max-height: 90px;
   margin: 0;
   margin-bottom: 37px;
   order: 1;
