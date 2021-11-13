@@ -91,7 +91,7 @@ function setSliderPosition(k) {
 }
 
 function setLinkTabindex(k) {
-  const linksPreviousActiveScreen = document.querySelectorAll('.promo-slider__item a[tabindex = "0"]');
+  const linksPreviousActiveScreen = document.querySelectorAll('.promo-slider__item a');
   linksPreviousActiveScreen.forEach((link) => {
     link.tabIndex = -1;
   });
