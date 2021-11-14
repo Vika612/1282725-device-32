@@ -924,14 +924,12 @@ body {
 .slide__info-title {
   margin-bottom: 29px;
   order: 0;
-  overflow-y: hidden;
 }
 
 .slide__info-text {
   margin: 0;
   margin-bottom: 37px;
   order: 1;
-  overflow-y: hidden;
 }
 
 .slide__list {
