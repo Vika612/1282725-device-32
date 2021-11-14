@@ -1403,7 +1403,7 @@ body {
 }
 
 .subscription__wrapper {
-  padding: 74px 0 130px;
+  padding: 74px 0 135px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1502,7 +1502,7 @@ body {
 
 .footer__logo {
   width: 150px;
-  margin: 60px 0 28px 0;
+  margin: 60px 0 25px 0;
 }
 
 .footer__logo--inner {
@@ -1528,7 +1528,7 @@ body {
 }
 
 .footer__info {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   display: flex;
 }
 
@@ -1724,7 +1724,7 @@ body {
 /* INNER */
 
 .inner__wrapper {
-  margin-bottom: 45px;
+  margin-bottom: 48px;
   padding-left: 60px;
 }
 
@@ -1735,6 +1735,7 @@ body {
 /* BREADCRUMBS */
 
 .breadcrumbs {
+  margin: 0;
   margin-left: -13px;
   padding: 0;
   display: flex;
@@ -1816,7 +1817,7 @@ body {
   position: relative;
   max-width: 250px;
   margin-right: 58px;
-  padding-bottom: 20px;
+  padding-bottom: 23px;
 }
 
 .filter__field {
@@ -1827,34 +1828,45 @@ body {
 }
 
 .filter__field--color {
-  margin-bottom: 18px;
+  margin-bottom: 21px;
 }
 
 .filter__field-title {
   width: 100%;
   margin-bottom: 5px;
-  padding-top: 14px;
+  padding-top: 12px;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.1;
+  line-height: 21px;
   letter-spacing: -0.02em;
   color: var(--black);
   border-top: 2px solid var(--black);
+  display: block;
+}
+
+.filter__field--color  .filter__field-title {
+  margin-bottom: 26px;
+}
+
+.filter__field--bluetooth .filter__field-title {
+  margin-bottom: 29px;
 }
 
 .filter__field-list {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .filter__field-item {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .filter__field-item label {
   position: relative;
   padding-left: 40px;
-  display: inline-flex;
+  display: inline-block;
+  vertical-align: top;
   font-size: 16px;
   line-height: 1.2;
   color: var(--black);
@@ -1867,7 +1879,7 @@ body {
   bottom: 0;
   z-index: 6;
   width: 200px;
-  padding: 15px 37px;
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
 }
@@ -2184,11 +2196,11 @@ body {
 }
 
 .cards__list {
-  margin-bottom: 44px;
+  margin: 17px 0 46px 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 48px 40px;
+  gap: 46px 40px;
   list-style: none;
 }
 
@@ -2205,7 +2217,7 @@ body {
 
 .cards__load {
   width: 100%;
-  padding: 17px;
+  padding: 17px 17px 15px;
   display: block;
   border: 3px solid rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -2316,7 +2328,7 @@ body {
 /* PAGINATOR */
 
 .paginator {
-  margin-bottom: 71px;
+  margin-bottom: 77px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2405,7 +2417,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 920px;
-  margin: 0 auto;
   padding: 64px 70px;
   border: 10px solid var(--black);
   background-color: var(--white);
