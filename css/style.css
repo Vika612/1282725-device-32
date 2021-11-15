@@ -1789,7 +1789,9 @@ body {
 /* FILTER */
 
 .filter {
+  width: 317px;
   padding-left: 58px;
+  padding-right: 58px;
 }
 
 .filter__title,
@@ -1813,8 +1815,6 @@ body {
 
 .filter__form {
   position: relative;
-  max-width: 250px;
-  margin-right: 58px;
   padding-bottom: 23px;
 }
 
